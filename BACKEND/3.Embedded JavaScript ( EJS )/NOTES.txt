@@ -1,0 +1,133 @@
+NODE: EJS 
+What is Templating?
+EJS(Embedded JavaScript Templates(fixed layouts))
+EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+
+Templates are layout like path parameter is the layout for creating different different routes 
+
+Pure Page ko create karne ke lia bhi templates hote hai
+we dont create seprate HTML webpage for each account like in instagram there is not seprate HTML page for each account
+
+We use templating to create one blueprint page and then use that blueprint to create multiple dynamic pages so for 100000 users we dont need to create multiple html page 
+
+Tools to achieve templating:
+i. Handlebars
+ii. EJS templates (popular, JavaScript based)
+
+
+
+
+
+Using EJS:
+we use EJS using app.set function 
+app.set("view engine" , "ejs");
+here we imagine view engine as template engine and we set template engine to ejs means the thing or the packages that is used to create templates or render it is gonna be ejs
+
+with EJS we dont send response we render it (render not send) (render means we send file )
+
+we use res.send to send string, array, boolean, object, html as a respond
+we use res.render to send files html code in the form of a file as a respond (we send .ejs file in res.render)
+
+when we use res.render express by default go to the views folder and then check for the passed file 
+
+jaha se server run hota hai waha se view directory ko search karta hai express
+
+if we want ki ham agar bahar se bhi apne server ko run kare to ham res.render se ejs file ko render kar paye jo express views folder ko search kar paaye 
+then we have use path package and app.set function
+
+
+
+
+View directory:
+whenever we use template we set the view directory fixed using path package and app.set function
+we set view path to the constant path so that if we run server from different folder it will render 
+
+
+
+
+
+Interpolation syntax in EJS:
+Interpolation refers to embedding expression into marked up text. 
+EJS makes -> HTML -> dynamic 
+we can go to ejs.co for documentation
+
+here we itself create data inside ejs tag 
+but when we learn database then we see data will come from database in backend
+
+
+
+
+Passing data to EJS 
+we can also parse data from database into the EJS 
+
+
+
+Instagram EJS 
+Create a basic template for instagram page based on following route:
+variable routes ke hisab se variable intagram pages ko create karenge
+/ig/:username 
+
+so that's how we create different different pages based on different different usernames 
+
+
+
+
+
+Conditional Statements in EJS:
+Adding conditional inside EJS 
+we use <% %> scriplet tag to embed conditional Statements inside EJS templates 
+
+
+
+
+Loops in EJS templates:
+we use <% %> and <%= %> to implement loops on ejs 
+
+
+
+
+Instagram page with EJS 
+data.json we assume that data from database come into this data.json file 
+to access this in index.js we need to require it 
+const instaData = require("./data.json");
+so we replicate how data comes from database to backend and how the seprate page for individual account is created for each data 
+so the data of the pages created are not stored in index.js, instagram.ejs it comes from database and we use that data in the form of templates in ejs 
+
+
+
+
+Serving Static Files:
+till now we learn how we can render html code as a respond but in real world project of websites we also have to render css and JavaScript logic
+
+when we send requests on websites like amazon flipkart then the respond is not only html it is css JavaScript also 
+
+to include static files like css, js we use:
+app.use(Middleware)
+app.use(express.static(folder_name))  folder will contains all the static files which we can use it for html or ejs templates 
+app.use(express.static(path.join(__dirname, "public")));
+
+there should be the public named folder to serve static files like we have views folder to serve ejs files 
+by default express uses public folder to access static files 
+
+we can change the name of the public and view folder but we have to use additional function
+
+when we run over server from parent directory then the express cannot able to find public folder so for that we use path.join method of path package 
+path.join(__dirname, "public") in folder name
+
+we can also serve two directory in path.join
+path.join(__dirname, "public/js")
+path.join(__dirname, "public/css")
+
+so we can include css, and js files with ejs files 
+
+
+
+
+
+Includes: 
+It is a way to create subtemplates 
+<%- include("includes/head.ejs") %>
+we create include folder to serve sub template and write code init 
+
+so we can create and use subtemplates which can be used in many templates in includes folder
+ 

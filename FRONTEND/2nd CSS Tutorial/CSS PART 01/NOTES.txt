@@ -1,0 +1,202 @@
+CSS:
+CSS is a language that is used to describe the style of a document.
+style of a document means
+text
+color
+backGround color
+button
+etc..
+these are properties
+
+before styling the document there must be something inside document which we can style that is given by html(contents)
+css creates major differences
+
+
+Basic Format of CSS:
+h1 {
+    color : red;
+}
+where : 
+h1 = selector : select on which element we have to apply styling
+color = property
+red = value
+
+
+How to include Styles?
+There is three way to include style in html document: 
+.Inline Styles:
+Writing style directly inline on each element
+<h1 style="color: red"> Apna College </h1>
+color property apply on text
+Not feasible very basic way to apply css
+cannot be implemented on large scale
+
+.Using <style> tag
+Style is added using the <style> element in the same document
+<style> tag ka kaam hota hai 
+single html document ke lia styling add karna 
+<style>
+        h1{
+            color: red;
+        }
+</style>
+This style tag apply style only for this file.
+Not feasible because we have to write css seprately for each html file
+
+
+.External Stylesheet
+Writing CSS in a separate document & linking it with HTML file
+separate document of CSS file
+It is not compulsory that html and css file name must be same
+feasible way to apply css on html document
+
+
+Linking HTML with CSS file
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+
+Color Property:
+Used to set the color of foreground
+
+color : purple
+color : #ffffff;
+color : rgb(255,255,255);
+
+BackGround Color Property:
+Used to set the color of background
+
+Practice Qs
+
+
+
+Color Systems:
+(i) Named Colors
+color : black;
+When we use simple colors then we can use Named Colors
+
+(ii) RGB Color System
+color : rgb(0,0,0);
+length = 0 to 255
+
+(iii) HexaDecimal Color System / Hex Code
+color : #ffffff
+length = 0 to F
+
+Practice Qs 
+Qno1. #ffffff (White)
+Qno2. rgb(255,255,0),  #ffff00
+rgb(0, 255, 255),  #00ffff
+
+
+
+
+
+TEXT RELATED CSS PROPERTIES:
+text-align
+font-weight
+text-decoration
+line-height
+letter-spacing
+font-size
+
+
+text-align: alignment is according to parent element not according to document or screen size
+.left/start
+.right/end
+.center
+.justify : to maintain the horizontal allignment of all the text
+
+font-weight: range (100-900)
+.normal //400
+.bold //700
+.100
+.bolder   (parent relation)
+.lighter  (parent relation)
+
+text-decoration: set the appearance of decorative lines on text like underline
+.underline
+.overline
+.line-through
+.none
+we can also change the shape and color of these lines
+text-decoration-color
+text-decoration-style
+use case: underline, line-through and to remove underline of anchor tag
+
+line-height: controls the height of the line of text ranges()
+.normal  
+.2.5  means (2.5)*normal
+
+letter-spacing: controls the horizontal spacing behavior between text characters
+.normal
+.10px  px stands for pixel : unit of measurements in CSS
+we can use letter spacing to style headings
+
+Font-size units in CSS:
+.Absolute(fixed or value doesn't change): px,pt,pc,cm,mm,in 
+.Relative(relation with other values(e.g screen width)): %, em, rem, ch, vh
+em: related to current size
+rem: define  what size of your font relative to parent 
+
+.px: absolute unit of measurements for our font size
+Pixels(px):
+most commonly used absolute unit
+96px = 1 inch
+not suitable for responsive websites 
+responsive websites = relative units
+.font-size: 50px;
+
+font-family: specifies a prioritized list of one or more font family names
+.arial
+.avant garde, didot, sans-serif
+we see different different font styles on different different websites
+if we set font style that browser does not supported then the font style will be the default which is supported by the browser
+
+there are multiple font family:
+sans serif, serif, monospaced, fantasy, script
+we can also write list of font family in font-family(backup family in one single list)
+
+Practice Question
+text transform:
+.uppercase
+.lowercase
+.many more
+
+
+We face situation many times in like we have to do work that we dont know or that we dont learn but we have to discover how we can complete it. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

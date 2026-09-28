@@ -1,0 +1,33 @@
+Z-INDEX:
+
+Z-Index:
+.It decides the stack level of elements
+.Overlapping elements with a larger z-index cover those with a smaller one
+.it is used to tell that in the website or brower kon si chij upar wale level par aayegi aur kon si chij niche wale level par aayegi
+.jab bhi elements overlap karte hai matlab ek dusre ke upar aa jate hai unki layer ban jati hai to waha par ek stack form ho jata hai
+.like books stack isi tarike ka stack hamare elements se create hota jab bhi ham apne webpage ke upar apne elements ko create karte hai
+.screen par elements ka alag alag stack level hota hai 
+.iss level ko waise hame iss tarike se banane ki jarurat nahi sirf theoretically hi isko samajhma kafi hoga
+.jitna stack level jayda hoga utna wo webpage ke upar aage ya saamne ki taraf aati hai aur jitna stack level kam hoga utna wo piche yani background me shift hoti chali jati hai 
+
+.to jab bhi ham elements ka stack level control karna chahte hai (yani hame screen par kon si chij upar dikhani hai aur kon si chij niche dikhani hai jab doo elements overlap kare) then we use z-index property 
+
+.jiski z-index property ki value jayada hogi wo element screen ke saamne ki taraf aa jaayega
+.by default sare ke sare elements ka z-index 0 hota hai yani auto hota hai
+.agar sare element ki z-index same hoti hai to wo element screen par saamne ki taraf aata hai jiski property css ke andar last me define ki gyi hai
+
+
+.**VVI
+.z-index property ki ek khash chij hoti hai ki z-index aap sirf unhi elements ke lia set kar sakte hai jinko hamne koi position de rakhi ho
+.matlab jis bhi element ki position static ho ya default ho to ham uske lia z-index property ko set nahi kar sakte hai nahi to nahi change kar sakte hai 
+
+z-index: auto(0)
+z-index: 1 / 2 / ....
+.we can set z-index value positive as well as negative also
+.jitna jayada z-index ki value positive hoga utna jayada wo bahar ki taraf aayega ya upar ki taraf aayega
+z-index: -1 / -2 / .....
+
+.to iss tarike se z index property hamari kaam karti hai
+
+
+

@@ -1,0 +1,5 @@
+In this lesson:
+1.Function = let us reuse our code
+2.Return = get a value out of a Function
+3.Parameters = put values into a function 
+4.Improved the code for Rock, Paper, Scissors 

@@ -1,0 +1,90 @@
+Get & Post Requests:
+Get:
+.Used to GET some response 
+.Data sent in query strings
+(limited, string data & visible in URL)
+
+Post:
+.Used to POST something (for Create/Write/Update)
+.Data sent via request body (any type of data)
+
+Get request me url me data dikhta hai jabki Post request me url me data nahi dikhta 
+form ka pura data request object me hi send hota hai 
+By convention we use GET request to get some responses and POST request to send some data to the backend
+but we can also use GET request for sending data and POST request for getting responses
+For better development practices we must follow some convention
+
+
+
+
+Handling POST request:
+because the data is not passed through the query string in POST request it is passed through the request body
+so we handle post request in two steps:
+(i). set up POST request route to get some response
+(ii). parse POST request data
+
+we write:
+app.use(express.urlencoded({extended : true}));  // middleware 
+app.use(express.json());
+so that express understand the data which is present in req body 
+write first line so that express understand urlencoded data 
+write second line so that express understand json format data
+there is nothing default in req body so we must write these lines in index.js 
+
+
+
+
+Revisiting JS for OOPS:
+Object Oriented Programming
+To structure our code
+.prototypes
+.New Operator
+.constructor
+.classes
+.keywords(extends, super)
+
+
+
+
+Object Prototypes:
+prototypes are the mechanism by which JavaScript objects inherit features from one another.
+It is like a single template object that all objects inherit methods and properties from without having their own copy.
+
+arr._proto_(reference)
+Array.prototype(actual object)
+String.prototype
+
+Every object in JavaScript has built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+
+
+
+
+Factory Functions:
+A function that creates objects 
+We don't as such use Factory function because of some disadvantages:
+When we make object using Factory function then Every objects have their own copy even for common function like talk()
+that why we have better concept compared to Factory Functions that is New Operator
+
+
+
+
+
+New operator:
+The new operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function
+There is one more better way compared to new operator to create multiple objects that is Classes because new operator syntax is sometime tricky for out day to day uses
+
+
+
+
+Classes:
+Classes are a template for creating objects
+The constructor method is a special method of a class for creating and initializing an object instance of that class 
+
+
+
+
+Inheritance:
+Inheritance is a mechanism that allows us to create new classes on the basis of already existing classes.
+super keyword is used inside constructor
+super keyword means parent class constructor

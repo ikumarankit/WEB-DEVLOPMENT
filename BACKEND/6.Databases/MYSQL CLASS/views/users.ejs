@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users List</title>
+    <link rel="stylesheet" href="/users.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Users 
+            <button class="btn join-button js-join-button">Click to Join Us!</button>
+        </h1>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchBar" class="js-searchBar" placeholder="Search by username or email...">
+            <button class="search-btn js-search-button">Search</button>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Edit Username</th>
+                    <th>Delete Account</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach((data) => { %>
+                    <tr>
+                        <td><%= data.id %></td>
+                        <td><%= data.username %></td>
+                        <td><%= data.email %></td>
+                        <td><button class="btn editButton" data-user-id="<%= data.id %>">Edit Username</button></td>
+                        <td><button class="btn deleteButton js-delete-button">Delete</button></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/users.js"></script>
+</body>
+</html>

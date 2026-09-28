@@ -1,0 +1,408 @@
+HTML : HyperText Markup Language
+Markup Language means Define structure and formatting of our websites
+we are talking about style , color, fonts etc. we are talking about the structure of websites
+we use HTML to convert normal plain text into formatted text
+webpages are made up of by small-small elements
+
+Now we talk about how we can display any information on the websites
+HTML Elements : Standard Elements that browser recognizes
+We use HTML elements to create : 
+Paragraph
+Heading 
+Images
+HTML Tags:
+Tags creates elements
+The component used to design the structure of websites are called HTML tags.
+Paragraph <p> abcd </p>
+Heading   <h1> Heading </h1>
+So create different different elemets we use different different HTML tags
+
+HTML Tags:
+A container for some content or other tags 
+<p> This is a paragraph </p> this is an HTML element
+<p>(Opening tag)  </p>(closing tag) these are elements & This is a paragraph is content inside elements
+
+One more important thing about HTML is that the web page we created is only run in my own system because its file is only present in my system
+
+The web page that is created is only run by my own computer because its html file is only present in my computer, If we want to upload our webpage over the internet and we want to make web pages so that everyone can access and open so we need to learn about domain, hosting that we learn in upcoming videos
+
+
+Paragraph Element: 
+The <p> HTML element represents a paragraph
+To crate paragraph element we use <p> tag in HTML
+To display all the content together we use paragraph tag
+we use paragraph tag to display connected related information or content
+
+nesting -> nested tags
+<p> This is a paragraph tag <b> Ankit <b> </p>
+
+
+Heading Elements 
+The <h1> to <h6> HTML elements represents six levels of section Headings. 
+<h1> is the highest section level and <h6> is the lowest
+
+<h1> big heading
+<h2>
+<h3>
+<h4>
+<h5>
+<h6> small heading
+
+every heading tags has predefined default size
+we cannot change font size for Headings
+if we want to write a good html code then there is only one <h1> heading tag in it and can we multiple <h2> tags depending upon level of the text on our webpage
+
+
+// PRACTICE QUESTION: 1
+If we want to make changes in our webpages we can do it temprorly by using inspect section instead of writting html in vs code then save then see the change
+
+HTML Boilerplate code:
+This is the stadard format or skeleton of writing HTML code
+Is a general layout that we follow everytime we write HTML code
+we can use prewritten Boilerplate code by using (!) emmet(is a short form preinstalled in a codeeditor)
+for better layout or formatting we can use indentation if the tag is inside another html tag
+indentation -> proper spacing
+indentation is the sign of a good, expreince and professional programmer
+by using indentation our code become more readable
+
+
+List Element in HTML
+If we want to display list in our webpage, we use list tag
+Two Types:
+(i) Unordered list -> in points
+(ii) Ordered list -> in numbers
+
+Unordered list:
+<ul>
+    <li>  </li>
+    <li>  </li>
+</ul>
+
+It is not compulsory to write text in <li> tag we can also write another html tag
+
+Ordered list:
+<ol>
+    <li>  </li>
+    <li>  </li>
+</ol>
+
+we can also change type or an Ordered li by using type attribute
+<ol type="A">
+    <li>  </li>
+    <li>  </li>
+</ol>
+
+HTML Attributes: (a = "b")
+where a : attribute
+and b : attribute value
+Attributes are used to add more information to the tag.
+e.g <html lang="en">  english language is used in html
+    <ol type="a">     type of list is a,b,c...
+
+
+Anchor Element:
+Used to add links to your webpage
+<a href="link">Google</a>
+there are multiple web pages and websites that we can linked with our main webpage
+two types of links can be added in the href attribute value 
+(i) absolute      e.g google, netflix etc
+(ii) relative     e.g file link
+
+
+Image Element:
+Used to add image to your page
+<img src="image.png" alt="Random Image">
+Image tag is single tag and does not contain content(text)
+two types of links can be added in the src attribute value 
+(i) absolute      images on the internet
+(ii) relative     images on the same folder
+alt attribute is used to describe the image
+index.html is the special name of our main html file  
+
+
+
+// PRACTICE QUESTION: 2
+
+
+Br Tag:
+Used to add next line (line breaks) to your page
+It is a single tag
+<br>
+
+Bold, Italic & Underline Tags:
+Used to highlight text in your page
+<b> Bold </b>
+<i> Italic </i>
+<u> underline </u>
+
+Comments in HTML:
+This is part of code that should not be parsed
+<!-- This is an HTML Comment -->
+Comment is for those who reads our code
+Comments are used to describe code
+
+MDN Resource: 
+MDN is a website
+MDN is very good resource for development
+If we want to discover extra thing then we can go and learn MDN articles for anytopic
+Personal encyclopedia for development journey
+
+Two Types of languages:
+(i) case sensitive 
+(ii) Not case sensitive
+
+HTML is not case sensitive language
+SQL is also not case sensitive language
+<html> = <HTML>
+<p> = <P>
+<head> = <HEAD>
+<body> = <BODY>
+
+Java Script is case sensitive language
+
+// PRACTICE QUESTION: 3
+Make portfolio
+
+
+
+
+
+HTML LEVEL: 02
+Every elements that we study in html can be classified into two categories
+Inline vs Block Elements
+Block Element: 
+Takes up the full-width available (whole block)
+starts from new line
+e.g Heading, paragraph, body tag
+
+Inline Element: Takes up only necessary width
+Dont't start from new line
+e.g Anchor tag, image tag
+
+Div Element: (Content division element)
+Div is a container used to hold other HTML elements or group elements together 
+It is a block Element
+It does not have its own functionality it is used as a container element for other elements
+Websites become the collections of divs
+
+Span Element:
+Span is also a genenic container used to hold other HTML elements or group elements together
+Span is an inlne element
+It does not have its own functionality it is used as a container element for other elements
+
+Hr Tag: like divider
+br tag is line breake and hr tag is divider
+Horizontal Rule Element
+It is a single tag
+<hr>
+
+Sub and Sup Tag:
+It is used to add Subsscript and superscript
+It is used for mathematical formulas and molecular formulas
+
+// PRACTICE QUESTION: 4
+
+Semantic Markup:
+It is the markup that relates to the meaning of content
+Now we learn about tags whose inside content will be known by the name of the tags
+
+Tags or elements can be classified in two categories
+(i) semantic tag : we can assume what will be the content stored inside semantic tag just by seeing its name
+e.g heading tag, paragraph tag, image tag, header tag, footer tag
+(ii) non semantic tag : opposite of semantic tags (inka naam inke meaning ke sath itna connect nahi karta)
+e.g div tag, span tag
+
+good websites uses semantic markup
+meaning se matlab hai
+
+Why use semantic markup?
+(i) meaningful / structured layout
+(ii) readable
+(iii) seo friendly
+(iv) UX improve
+
+Famous Tags in Semantic Markup:
+<header>    topmost part of the website
+<main>      middle part of the website (main content)
+<footer>    last part of the website
+<nav>       navigation part of the website  (direct to other webpage)
+
+There is only one header, main and footer of the websites
+more semantic tags:
+<article>
+<section>    to group together related content
+<aside>      indirectes related links / content
+
+
+// PRACTICE QUESTION: 5
+Add semantic markup to your portfolio page
+
+
+HTML Entities:
+Things that we did not do directly in our HTML document will be done with the help of HTML Entities
+e.g less than, greater than, smaler than sybols
+&lt; &gt; &st &nbsp; (non breaking space) for space
+An HTML entity is a piece of text("String") that begins with an ampeersand(&) and ends with a semicolon(;).
+used to display reserved characters (Which would otherwise be interpreted as HTML Code), and invisible characters(like non-breaking spaces).
+can also use in place of characters that are difficult to type with a standard keyboard. e.g heart symbol
+browser interprets them & renders correct characters
+
+// PRACTICE QUESTION: 5
+
+
+Emmet:
+visit emmet.io
+Essential toolkit for developers
+it is a set of related plugins
+emmet is shortform
+child:
+p>div>img
+
+siblings:
+p+div+img
+
+multiplication:
+if we want to generate any elements multiple times
+ul>li*5
+
+Understanding HTML5:
+The term HTML 5 is essentially a buzzword that refers to a set of modern web technologies. This incluedes the HTML Living Standard, along with JavaScript APIs to enhance storage, multimedia, and hardware access
+
+How HTML works?
+HTML Standards(Living Standard): is a document that tells to the browser how HTML should work
+
+
+
+
+HTML Level: 03
+Tables formation and manipulation and Forms in HTML
+Tables in HTML:
+Tables are used to represent real life table data
+tables different parts:
+tables data are divided in the form of row and columns
+tables are the combination of rows and columns
+table header: main row of table (it tells about the main content of the table)
+Syntax to recreate any table: 
+<table>
+      <caption>Table Caption</caption>
+        <tr>
+          <th>header1</th>
+          <th>header2</th>
+        </tr>
+        <tr>
+          <th>data1</th>
+          <th>data2</th>
+        </tr>
+      
+</table>
+
+table caption: describe which type of data are inside the table
+we learn three different types of HTML tags to represent data in table
+<tr> used to display table row
+<th> used to display table header
+<td> used to display table data
+
+Semantic in Tables:
+<thead> to wrap table header 
+<tbody> to wrap table body
+<tfoot> to wrap table footer 
+
+table footer is rarely used when we have to show the totalsum, total value
+
+Colspan & Rowspan Attributes
+used to create cells which spans over multiple rows or columns
+
+
+// PRACTICE QUESTION: 7
+
+Forms in HTML:
+Most Important Concept
+Forms are used to collect data from the user
+Syntax:
+<form>
+    form content
+</form>
+
+Action Attribute:
+Action attribute is used to define what action needs to be performed when a form is submitted or where the form data should be sent
+
+Form Elements:
+(i) Input 
+. It is a single tag
+. Used to create multiple form controls
+. there are multiple types of inputs that can be created using type attribute
+
+(ii) Placeholder attribute:
+<input type"text" Placeholder="Enter Name">
+
+(iii) Labels:
+.Label elemets represents a caption for an item in a user interface
+<label>
+    Enter your username:
+    <input type="text" placeholder="username">
+</label>
+
+Label Classical Approach:
+<label for="username"> Enter your username: </label>
+<input type="text" id="username" placeholder="username">
+
+
+(iv) Button Element: 
+<button> submit </button>
+
+<!-- Types of Button Element  -->
+type attribute: 
+<button type="submit">submit</button>
+<button type="button">do something</button>
+<button type="reset">do something</button>
+
+Not advisable
+Button using input Element:
+<input type="submit">
+<input type="submit" value="click me">
+<input type="button" value="click me">
+
+(v) Name Attribute:
+Name of the form control. Submitted with the form as part of a name/value pair
+
+<input type="text" placeholder="enter name" id="username" name="username" />
+to check what information is stored inside input box and accessible in backend
+information of the form send by the name = value pairs
+where name is name attribute value and value is actual input value
+
+url ke andar ham sensitive information paas nahi karwate
+
+
+// PRACTICE QUESTION: 8
+
+
+
+Input Element
+(vi) Checkbox
+<input type="Checkbox" name="age" id="age" checked />
+<label for"age"> I am 18+ </label>
+
+(vii) Radio Button
+Is used to select one option from the multiple
+
+
+Next thing to learn in Forms is:
+Select Elements:
+(i) Dropdown: we create dropdowns in forms with help of select elements in html 
+value will be passed in the backend
+we can use selected attribute if we want to show preselected option
+
+One more type of input element
+Range: we can select data in range forms
+
+Last Form element:
+Text Area: we can create text area in our forms
+
+
+// PRACTICE QUESTION : 9
+
+
+THE ENDDDDD
+
+
+

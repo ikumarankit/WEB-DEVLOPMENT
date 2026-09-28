@@ -1,0 +1,478 @@
+Our 1st DATABASE: MySQL 
+in this lesson we are going to learn about DATABASES and how we can use DATABASES to store data and how we can access those DATABASES using node
+
+First DATABASE: MySQL
+MySQL is database and SQL is language to use this database
+So SQL is a language that is used to interact with database(MySQL)
+As developer we use SQL to access database and make changes to database itself 
+
+
+What is Database?
+It is a collection of data in a format that can be easilly access
+
+Why databases?
+.can store large data
+.features like security, scalability etc.
+.Easier to insert, update or delete data 
+.Searching of data 
+
+when we talk about data then a term called DBMS is come
+we imagine DBMS as an additional layer over the Database to organize data more systematically it defined operation, function we can use to store data systematically 
+
+
+
+
+
+#SQL vs NoSQL
+We have different different databases inside Database:
+1. SQL Databases
+-also known as relational databases 
+-(data stored in Tables(rows and columns))
+-Table is actually relation here 
+-eg. MySQL, Oracle, PostgreSQL etc.
+Mostly SQL is used to interact with all of these databases but with small change in command 
+-we must good at one relational database
+
+2. NoSQL Databases 
+-actually a collection of databases means may different database uses different languages but never uses SQL 
+-also known as non relational database
+-doesn't stroed data in table format 
+-(data stored in document/ key-val/ graphs etc.)
+-eg. MongoDb, Cassandra, Neo4j etc. 
+
+so in all SQL databases or relational databases data are stored in table format 
+but in NoSQL databases or non relational databases each database stored data differently 
+
+here we learn as much database that we use in development and projects 
+Interview ke andar database me wahi puchte hai jo aapne projects me use kia ho 
+
+
+
+
+
+SQL (Structured Query Language):
+SQL is a programming language used to interact with relational databases.
+
+so in MySQL we can create multiple databases 
+In a single database we have multiple tables where we store data like for college database we can have student and teacher table with their own attributes like name, age, subject, id, rollNo. etc. 
+inside database tables are related to each other 
+we don't create tables illogically we must create interrelated tables 
+
+
+
+
+
+Tables in MySQL:
+Tables have two component:
+
+1. column: like for user table => id, Name, Email, Followers, Following are columns 
+-it tells about table design (schema is the design of the table) 
+-it tells about metadata: data about data like id, Name etc. 
+
+3. rows: each row represents an individual user data 
+-single row is known as tuple 
+-it represent single user information
+
+to work with Database we have to download two things:
+1. MySQL Server: where databases are created and tables inside it
+we can manipulate database by starting MySQL Server
+
+2. MySQL workbench: to access SQL we need to install it
+
+
+
+
+
+Our 1st Database:
+first we install MySQL workbench and in MySQL workbench we write all the SQL commands and queries
+
+
+CREATE DATABASE db_name;      // SQL command 
+DROP DATABASE db_name;
+USE db_name;
+
+we write semicolon after each SQL command
+sql is case insensitive 
+generally we write table and databases name in small 
+if we want to create tables in any database then first we specify in which database we have to create it using USE command 
+
+
+
+
+
+
+Our 1st Table:
+CREATE TABLE table_name(
+    column_name1 datatype constraint(optional),
+    column_name2 datatype constraint(optional),
+    column_name2 datatype constraint(optional)
+);
+
+In Table we define what our schema(design: what column we creates) looks like 
+column_name1: define the metadata 
+datatype: defines what type of data will be stored in columns 
+constraint: rules over data that we defined 
+
+if we want to enter data in TABLE then we have INSERT command for it
+INSERT INTO student 
+VALUES 
+(101, adam, 12),
+(102, bob, 14);
+
+if we want to check student table data then we use 
+SELECT * FROM table_name
+
+so there are many operations like we are going to see in the next part of the chapters 
+
+
+
+
+DATABASE Queries:
+CREATE DATABASE db_name;
+CREATE DATABASE IF NOT EXISTS db_name;
+
+DROP DATABASE db_name;
+DROP DATABASE IF EXISTS db_name;
+
+SHOW DATABASES;
+SHOW TABLES;
+
+
+
+
+TABLES Queries or commands:
+.Create: define schema / columns of the table
+.Insert
+.Update: we can update data with this 
+.Alter: we can alter the schema of the table 
+.Truncate: delete all the data of the table and make it empty
+.Delete: delete the table 
+
+To create Table:
+CREATE TABLE table_name(
+    column_name1 datatype constraint(optional),
+    column_name2 datatype constraint(optional),
+    column_name2 datatype constraint(optional)
+);
+
+Data Types:
+datatype: defines what type of data will be stored in columns 
+
+there is one additional thing with datatype that is UNSIGNED which is used with numbers 
+
+
+
+
+
+Constraints:
+Rules for data in the table 
+
+NOT NULL:    columns cannot have a null value 
+UNIQUE:      all values in columns are different 
+DEFAULT:     sets the default value of a column 
+CHECK:       it can limit the values allowed in a column
+
+
+CONSTRAINT age_check CHECK (age >= 18 AND city = "Delhi")
+we can remove the constraint name it is optional age_check
+
+
+
+
+
+Two more important CONSTRAINTs:
+1. PRIMARY KEY: makes a column unique & not null but used only for one 
+KEYS are very important when we are talking about tables 
+KEY are special column 
+-we can make only one column as PRIMARY KEY
+-we can make PRIMARY KEY for the combination of columns but we generally make PRIMARY KEY for only one column
+
+Two way to make any column PRIMARY KEY:
+1.
+CREATE TABLE user (
+	id INT PRIMARY KEY,
+    age INT,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    followers INT DEFAULT 0,
+    following INT DEFAULT 0,
+    CONSTRAINT CHECK (age >= 13)
+);
+
+2.
+CREATE TABLE user (
+	id INT,
+    age INT,
+    name VARCHAR(30) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    followers INT DEFAULT 0,
+    following INT DEFAULT 0,
+    CONSTRAINT CHECK (age >= 13),
+    PRIMARY KEY(id)
+);
+
+
+FOREIGN KEY: prevents actions that would destroy links between tables 
+FOREIGN KEY is like a PRIMARY KEY that is used in another table like id from teacher table is used in student table of teacherId column 
+
+FOREIGN KEY hamare khud ke table me ek aisa column hai jo dusre table ka PRIMARY KEY hota hai.
+
+CREATE TABLE temp (
+    cust_id INT,
+    FOREIGN KEY (cust_id) REFERENCES customer(id)
+);
+references tell from which table which column is PRIMARY KEY
+
+we can also visualize tables in MySQL workbench using reverse engineering 
+and the diagram that is created in reverse engineering is known as ER diagram
+and table ko relation kahte hai 
+
+
+
+
+
+KEYS in detail:
+What are Keys?
+Keys are special columns in the table 
+
+Primary Key:
+It is a column (or set of columns) in a table that uniquely identifies each row. (a unique id)
+There is only on PK & it should be NOT null.
+
+
+Foreign Key:
+A Foreign key is a column (or set of columns) in a table that refers to the primary key in another table.
+
+FKs can have duplicate & null values. but PKs never 
+There can be multiple FKs.
+so this how we indentify keys in our tables 
+
+
+
+
+
+Table Queries
+Insert into Table:
+
+INSERT INTO table_name
+(colname1, colname2)
+VALUES
+(col1_v1, col2_v1),
+(col1_v2, col2_v2);
+
+order is important in the above format of inserting values in table 
+
+
+
+
+
+SELECT Command:
+Selects & show data from the DB 
+
+Syntax
+SELECT col1, col2 FROM table_name;
+
+Syntax to show all
+SELECT * FROM table_name;
+
+
+
+
+
+Next we will learn CLAUSES in SQL:
+1. Where Clause: To define some conditions 
+
+SELECT col1, col2 FROM table_name
+WHERE conditions;
+
+there are many operators that we can use with the WHERE conditions
+
+
+
+
+
+Operators in WHERE Clause:
+Operators
+Arithmetic Operators: +(addition), -, *, /, %
+Comparison Operators: =, !=, >, >=, <, <=
+Logical Operators: AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY 
+Bitwise Operators: &(Bitwise AND), | (Bitwise OR) it is used for bit manipulation
+
+
+
+
+
+Frequently used operators:
+AND (to check for both conditions to be true)
+OR (to check for one of the conditions to be true)
+BETWEEN (selects for a given range)
+IN (matches any value in the list(given))
+NOT (to negate the given condition)
+
+so this is how the Logical operators works with the SQL 
+
+
+
+
+
+2. LIMIT clause: add condition on total number of rows returned
+Sets an upper limit on number of (tuples) rows to be returned 
+
+SELECT col1, col2
+FROM table_name
+LIMIT number;
+
+we can also add LIMIT clause with WHERE clause 
+
+
+
+
+
+3. ORDER BY Clause:
+To sort in ascending (ASC) or descending order (DESC)
+
+SELECT col1, col2
+FROM table_name
+ORDER BY colname(s) ASC;
+
+so with the help of this we can sort the VALUES.
+
+
+
+
+
+Aggregate Functions:
+Aggregate functions perform a calculation on a set of values, and return a single value.
+.COUNT()
+.MAX()
+.MIN()
+.SUM()
+.AVG()
+
+SELECT max(colName)
+FROM table_name;
+
+so we can write Aggregate function with the SELECT command
+
+
+
+
+
+
+4. GROUP BY Clause:
+Groups rows that have the same values into summary rows.
+It collects data from multiple records and groups the result by one or more column.
+
+SELECT col1, col2 
+FROM table_name
+GROUP BY col_name(s);
+
+Generally we use GROUP BY with some Aggregate function.
+
+like if we want ki user table me hamare paas 14, 15, 16, 17 age ke kitne users hai unko group karne ke lia ham GROUP BY clause ka use kar sakte hai aur fir unka count nikal sakte hai Aggregate function se 
+
+So basically we use GROUP BY clause to Group the data and we can use Aggregate function to do some work on each group 
+
+har age group ke hisab se kya maximum followers hai usko bhi nikal sakte hai by the help of GROUP BY and Aggregate function 
+
+
+
+
+
+
+5.HAVING Clause:
+Similar to WHERE i.e. applies some conditions on rows.
+But it is used when we want to apply any condition after grouping 
+
+
+SELECT col1, col2
+FROM table_name
+GROUP BY col_name(s)
+HAVING condition;
+
+WHERE is for the table, HAVING is for a group 
+Grouping is necessary for HAVING 
+
+
+
+
+
+General Order:
+SELECT column(s)
+FROM table_name
+WHERE condition
+GROUP BY column(s)
+HAVING condition 
+ORDER BY column(s) ASC;
+
+
+
+
+
+Table Queries:
+UPDATE (to update existing rows)
+
+UPDATE table_name
+SET col1 = val1, col2 = val2
+WHERE condition;  // jin row ke upar ye condition apply karti hai unhi row to update kare 
+
+UPDATE user 
+SET followers = 600
+WHERE age = 16;
+
+we are not changing column i.e schema or design of the table currently we changing single row(tuple) of the table 
+
+
+
+
+
+
+Table Queries:
+DELETE (to delete existing rows)
+
+DELETE FROM table_name
+WHERE condition;
+
+if we dont write WHERE condition then it will delete all rows 
+
+
+
+
+
+Table Queries:
+ALTER TABLE (to change the schema)
+
+1.ADD COLUMN  
+ALTER TABLE table_name
+ADD COLUMN column_name datatype constraint
+
+2.DROP COLUMN 
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+3.RENAME TO 
+ALTER TABLE table_name
+RENAME TO new_table_name
+
+4.CHANGE COLUMN (rename)
+ALTER TABLE table_name
+CHANGE COLUMN old_name new_name new_datatype new_constrainst;
+
+5.MODIFY (modify datatype/ constraint)
+ALTER TABLE table_name
+MODIFY col_name new_datatype new_constrainst
+
+
+
+
+
+Table Queries:
+TRUNCATE (to delete table's data)
+one is DROP TABLE by which whole table got deleted 
+TRUNCATE TABLE table_name;
+
+
+till now we learn relate to SQL commands 
+in next part we actually see how to implement this SQL Command to our website backend 
+means how we connect SQL with node 
+

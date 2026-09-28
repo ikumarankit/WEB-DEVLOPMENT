@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Chat</title>
+    <link rel="stylesheet" href="/updateForm.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Edit Message</h2>
+        <!-- Form posts to update route -->
+        <form action="/chats/<%= chat._id %>?_method=PUT" method="POST">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" value="<%= chat.from %>" readonly>
+
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" value="<%= chat.to %>" readonly>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required><%= chat.message %></textarea>
+
+            <button type="submit" class="submit-btn">Update Message</button>
+        </form>
+    </div>
+</body>
+
+</html>

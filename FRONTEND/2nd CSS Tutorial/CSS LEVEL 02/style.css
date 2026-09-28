@@ -1,0 +1,280 @@
+/* LEVEL : 02 */
+/* BOX MODEL IN CSS */
+/* 
+Height
+Width
+Border
+Shorthand
+Border radius
+Padding
+Shorthand
+Margin 
+Shorthand
+*/
+
+/* 
+div {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+
+    
+    border-width: 2px;
+    border-style: solid;
+    border-color: blueviolet; 
+   
+
+    
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 1px 2px 3px 4px;
+    margin: 5px 10px 15px 20px; 
+   
+    } 
+*/
+
+/* 
+h1 {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(236, 255, 29);
+
+    border-width: 3px;
+    border-style: dotted;
+    border-color: rgb(0,255,0);
+
+    border: 2px,double,red;
+    text-align: center;
+    } 
+*/
+
+/*
+.circle {
+    border-radius: 50%;    circle
+    text-align: center;
+
+    
+    padding-top: 25px;             clockwise
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;  
+   
+
+    padding: 25px;
+    padding: 5px 10px 15px 20px;
+
+    
+    margin-top: 15px;             clockwise
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px; 
+   
+
+    margin: 20px;
+    margin: 5px 10px 15px 20px;
+
+    } 
+*/
+
+
+
+    /* PRACTICE SET : 03 */
+    
+/* 
+    div {
+        height: 100px;
+        width: 100px;
+        background-color: #00ff00;
+        border-radius: 50%;
+    } 
+*/
+
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+button {
+    background-color: #f08804;
+}
+
+a {
+    margin-right: 200px;
+    text-decoration: none;
+} 
+*/
+
+
+  
+/* DISPLAY PROPERTY */
+/* 
+inline
+block
+inline-block
+none
+*/
+/* visibility : none; */
+
+/* 
+div {
+    background-color: yellow;
+    display: inline;
+} 
+*/
+
+/* 
+button {
+    display: block;
+} 
+*/
+
+/* div {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline;
+} */
+
+/* div {
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;  
+} */
+
+/* #box2 {
+    //display: none;//
+    visibility: hidden;
+} */
+
+
+/* ALPHA CHANNEL */
+
+/* h1 {
+    background-color: rgba(255,0,0,0.5);
+}
+
+p{
+    background-color: rgba(255,0,0,1);
+}
+
+#box1 {
+    background-color: rgba(0,0,255,0.5);
+}
+
+#box2 {
+    background-color: rgba(0,0,255,0.75);
+}
+
+#box3 {
+    background-color: rgba(0,0,255,1);
+} */
+
+
+
+
+/* PRACTICE SET : 04 */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    /* color: white; */
+}
+
+#navbar {
+    height: 60px;
+    background-color: #0f1111;
+}
+
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+
+button {
+    background-color: #f08804;
+}
+
+a {
+    color: white;
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+
+
+.mainContent {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+
+#box1 {
+    background-color: rgba(255,0,0,0.5);
+}
+
+#box2 {
+    background-color: rgba(239, 239, 46, 0.5);
+}
+
+#box3 {
+    background-color: rgba(0,255,0,0.5);
+}
+
+footer {
+    color: white;
+    background-color: #0f1111;
+    text-align: center;
+}
+
+main {
+    height: 1500px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+

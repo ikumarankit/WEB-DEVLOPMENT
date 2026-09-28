@@ -1,0 +1,168 @@
+What is Git?
+Free & Open Source Version Control System(tools that help to tracks changes in code)
+Git is fast and scalable
+Git is used for tracking changes in code 
+Git is help us to collaborate with other developers 
+Git is most popular 
+
+What is GitHub?
+Website where we host repositories online 
+To use GitHub we use Git we can also use GitHub Directly but the best programmers use GitHub using Git 
+
+Using Git
+There are multiple ways to use Git:
+through:
+.Command line(Most popular)
+.IDE / Code Editor(like VSCode)
+.Graphical User Interface(like GitKraken)
+
+We use gitBash to use Git
+
+Configuring Git 
+git config --gloabal user.name "MyName"
+git config --gloabal user.email "someone@email.com"
+
+
+Basic Git Commands:
+.clone - cloning a repository on our local machine
+git clone <some link> 
+.status - displays the state of the code 
+git status 
+
+so GitHub is the website where we can host our repositories and to interact with this website(GitHub) we use Git(tool) 
+Using Git means we type Git commands on the terminal to interact with the GitHub 
+
+to view hidden files of GitHub repo we use ls -a in bash and ls -Hidden in VSCode terminal
+there will always be a .git folder associated with the github repo which is hidden 
+
+File status lifecycle 
+untrack 
+unmodified (by default files)
+modified
+staged
+
+
+.add - adds new or changed files in your working directory to the git staging area 
+git add <file name>
+.commit - it is the record of change 
+git commit -m "some message"
+.push - upload local repo content to remote repo 
+git push origin main 
+origin means the location where the github repo is present and main is the branch 
+
+before commit any file first we have to stage it using git add <file name> 
+
+
+Till now we clone our remote repo (gitHub repo) on our local machine(turns into local repo) do modifications and changes in the local repo, add changes, then commit that changes and then publish the local repo commits to the remote repo that is github 
+
+
+More Basic Git Commands 
+.init - used to create a new GitHub repo on the local system
+git init
+git remote add origin <link>
+git remote -v (to verify remote)
+git branch (to check branch)
+git branch -M main (to rename branch)
+git push origin main 
+git push -u origin main (by this be set the (upstream)origin main and later on we dont have to write all this we just write git push it will automatically push into the origin main)
+
+From this we learn how we can push repo that we create on local system to the git hub or remote repo 
+
+if we don't create a new file or any untracked file then we can do commit and add together 
+git commit -am "message"
+
+
+WorkFlow:
+GitHub:  codeChanges -> commit 
+Local Git:  codeChanges(working directory) -> add(stage area) -> commit -> push 
+
+
+
+
+Git Branches:
+It is usefull when multiple developers working on the same project 
+It help defined the access level means which developers access which branch
+It helps in collaboration
+It helps in smooth development process 
+
+Branch Commands 
+git branch (to check branch)
+git branch -M main (to rename branch)
+git checkout <branch name> (to navigate)
+git checkout -b <new branch name> (to create new branch)
+git branch -d <branch name> (to delete branch)
+
+To merge other branch with main branch we use pull request command 
+
+Merging Code 
+git dff <branch name> (to compare commits, branches, files & more)
+git merge <branch name> (to merge 2 branches)
+when we merge some branch with main branch then the content of the main branch will change not the content of the some branch means lets say in bug-fix branch we write "hello from bug-fix branch" in hello file line 2 and in main we write "bonjour from main branch" in hello file line 2 then if we merge bug-fix branch to the main branch then after resolving the conflicts lets say we write "hello and bonjour" then the main branch conents will change into "hello and bonjour" but the bug-fix branch has still "bonjour from bug-fix branch" content 
+OR 
+Create a PR  (straight forward way to merge to branches)
+
+Pull Request (PR):
+It lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+It is a good practice to write comments while creating PR to tell the reason why we are creating PR 
+PR Merge karna bhi apne aap me ek commit hota hai 
+
+Pull Command:
+used to fetch and download content from a remote repo and immediately update the local repo to match that content 
+git pull origin main
+
+git push -> local to github
+git pull -> github to local 
+
+this is the straight forward without conflicts but sometimes there will be merge conflicts
+Merge Conflicts: An event that takes place when Git is unable to automatically resolve differences in code between two commits
+
+
+
+
+
+Fixing Mistakes:
+Case1: staged changes
+git reset <file name>
+git reset
+OR
+git restore --staged .
+git restore .
+
+Case2: commited changes (for one commit)
+git reset HEAD~1   (here HEAD points to the last commit)
+
+Case3: commited changes (for many commits) if we want to delete particular number of commits
+by using git log we got all the commits informations
+git reset <commit hash>
+git reset --hard <commit hash>
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  modified:   app.js
+
+git restore <file>..." to discard changes in working directory
+git restore .   (to discard all changes in working directory)
+
+we can use git revert to revert any middle commits 
+git revert <commit hash>
+git revert --abort (to cancle the revert operation)
+
+
+
+
+
+What is Forking?
+A fork is a new repository that shares code and visibility settings with the original "upstream" repository 
+Fork is a rough copy.
+
+
+So the PR(Pull request) is not just used for merging two braches of one account but we can also use PR for merging our own code with other account repository 
+
+
+
+
+To delete files and folder remotly:
+git rm <file name> (delete file locally as well as remotly)
+git rm --cached <file name> (delete file only remotly)
+git rm -r --cached <folder name> (delete folder from remotly only)

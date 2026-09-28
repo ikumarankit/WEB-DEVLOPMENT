@@ -1,0 +1,9 @@
+.h1Style {
+    text-decoration: underline;
+    color: purple;
+}
+
+.btnStyle {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,5 @@
+In this lesson:
+1.JavaScript is giving instructions to a computer
+2.Wrote JavaScript code
+3.Run our code using the console
+4.Syntax

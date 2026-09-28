@@ -1,0 +1,55 @@
+DOM (Document Object Model) 
+The DOM represents a document with a logical tree.
+It allows us to manipulate/change webpage content (HTML elements, CSS styling).
+
+When we link any HTML and CSS with JS then a tree like structure will be created 
+where there is multiple nodes and root node is document node and then body node and then others html elements or tags are nodes 
+each node is a JS Object 
+
+when we want to change some html elements(nodes is JS) then we can access that particular nodes and change it changes also reflect in the html 
+
+other than window object js automatically created one more object called document object for every webpage it store all the information related to css and html
+so if we change something in document object then it will also occur in html and css document
+
+if we want to show the properties of document object then we do console.dir not console.log 
+there are multiple objects also inside document object
+
+so when we use js to change html and css then we will use this document object
+
+There is a two step process to change html using java 
+(i). select the html element/s
+(ii). what are changes/manipulation we do with the selected element/s
+
+
+(i).
+How to select Elements? 
+(i). getElementById
+returns the element as an object or null(if not found)
+
+(ii). getElementByClassName
+returns the elements as an HTML collection or empty collection(if not found)
+
+(iii). getElementByTagName
+returns the elements as an HTML Collection or empty collection(if not found)
+
+Query Selectors 
+Allows us to use any CSS selector 
+most frequently used because its syntax in intutive and easy 
+by using this we don't need to remember different different methods 
+it is used to select single element or we can say object only 
+
+if we want to select all object of a particular class or tag then we can use querySelectorAll
+
+
+Selecting of the element is done now 
+(ii). what are changes/manipulation we do with the selected element/s
+Manipulating the elements or object
+Using Properties & Methods 
+(i).innerText
+Shows the visible text contained in a node 
+
+(ii).textContent
+Shows all the full text
+
+(iii).innerHTML 
+Shows the full markup 

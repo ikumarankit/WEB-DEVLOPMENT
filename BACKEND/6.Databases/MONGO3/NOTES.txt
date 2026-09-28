@@ -1,0 +1,73 @@
+Now we will discuss how we can use MongoDB as database with express app 
+Basic Set Up:
+intalling dependcies, writing start code, database connection etc.
+
+
+
+
+
+Creating the Model
+Chat will have: (_id, from, to, message, created_at(time and date))
+
+Till now we create  models in index.js but in real projocets or real time development in company there is more than one models or schema or collections 
+
+so we will create a separate folder for these schema and and create collections in these folders  
+we know that mongoose models represent collections in database
+we create models or collections in models folder but in the end we will require it into the index.js folder so the main work will we done in index.js only 
+
+we use models folder for just basic model setup 
+
+so in chat.js file of models folder first we require mongoose and then we create the schema and model and then export the model from the file so index.js require it
+
+
+
+
+
+Initialize Database
+init.js
+we will initialize database with some data initially 
+it is good practice to initialize database with some initial data or sampledata so we can test database by intializing data to database
+
+in init.js we will write the code for initializing the database
+we will run this file in starting when we initialize database with some sample data
+
+
+
+
+
+Index Route: Index Route means where we can see all the data 
+GET /chats    -> show all chats 
+
+
+
+
+
+New & Create Route 
+GET   /chats/New   -> render form to write new message
+POST  /chats    -> when form submit it insert new chat to database
+
+
+The operation like insertion, find, deletion and updation is asynchronous so have to write either a async-await in try and catch or then() or catch()
+
+
+
+
+
+Using Date: 
+string.toString().split(" ")[0]
+string.toString().split(" ").slice(0, 4).join("-")
+
+
+
+
+
+Edit & Update Route:
+GET     /chats/:id/edit 
+PUT     /chats/:id 
+
+
+
+
+
+Destroy or Delete Route:
+DELETE /chats/:id 

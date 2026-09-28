@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <h1>All Chats!</h1>
+    <div class="chat-container">
+        <!-- New Chat Button -->
+        <a href="/chats/new" class="new-chat-btn">+ New Chat</a>
+
+        <!-- Chat List -->
+        <% chats.forEach((chat)=> { %>
+            <div class="chat-card">
+                <div class="chat-header">
+                    <span><strong>ID:</strong>
+                        <%= chat._id %>
+                    </span>
+                    <span><strong>From:</strong> <i>
+                            <%= chat.from %>
+                        </i></span>
+                    <span><strong>To:</strong> <i>
+                            <%= chat.to %>
+                        </i></span>
+                </div>
+                <div class="chat-message">
+                    <%= chat.message %>
+                </div>
+                <div class="chat-date">
+                    <%= new Date(chat.createdAt).toLocaleString() %>
+                </div>
+                <div class="chat-footer">
+                    <a href="/chats/<%= chat._id %>/edit" class="edit-btn">✎ Edit</a>
+                    <form action="/chats/<%= chat._id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="delete-btn">🗑 Delete</button>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+
+<script src="/index.js"></script>
+</body>
+</html>

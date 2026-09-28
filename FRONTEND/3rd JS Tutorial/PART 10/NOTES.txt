@@ -1,0 +1,13 @@
+DOM Events: 
+Now we talk about Events in Js DOM 
+
+Events are signals that something has occurred. (user inputs / actions)
+we can say something that is triggred using our mouse or keyboard 
+
+inline events:
+handle DOM events inline 
+handling DOM events inline is much complicated and bad way of programming and not efficient also 
+we can do in some specific cases 
+
+Then how we can exactly handles DOM events 
+(i). onclick(when an element is clicked)

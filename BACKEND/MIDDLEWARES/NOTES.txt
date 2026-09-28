@@ -1,0 +1,81 @@
+Middleware:
+It is an intermediary
+
+Request  ->   Middleware   ->   Response 
+
+in Express
+Middleware in Express are functions that come into play after the server receives the request and before the response is sent to the client.
+
+
+Common middleware functions:
+.methodOverride
+.bodyParser
+.express.urlencoded
+.express.static
+
+app.use(express.urlencoded({ extended: true}));
+app.use(express.static(path.join(__dirname, "/public")));
+
+
+Properties middleware have:
+1. it can access req, res object
+2. chaining is possible in middleware means one middleware passes control to the other  middleware
+3. it can stop req res cycle by sending res so it never reach our api or route 
+
+
+
+
+
+
+What do middlewares do?
+Middleware functions can perform the following tasks:
+.Executes any code.
+.Make changes to the request and the response objects.
+.End the request-response cycle by sending response.
+.Call the next middleware function in the stack.
+
+// Our 1st Middleware:
+// app.use(middleware-function)
+// we use app.use for middleware because we want it works with all request
+// if we dont define the the path in app.use([path], [callback]) then it(middleware) will execute for all paths
+
+app.use((req, res) => {
+    console.log("Hi, i am middleware");
+})
+
+  
+Middleware have two choices:
+1. send response (execution stops)
+2. call next middleware  (using next()) (pass control to next middleware)
+
+
+
+
+
+
+Using next:
+The next middleware function is commonly denoted by a variable named next.
+
+If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function.
+
+
+based on the usage middleware is divided into multiple types:
+1. Application lavel
+2. Router level
+3. error-handling middleware
+4. built-in middleware
+5. third party middleware
+
+middleware always run even if the path is wrong or not created middleware always run irrespective of what is sent in the body or how the request is structured
+
+
+next() is consider as the end of the middleware but we can write code after next() but it is not good practice
+that why we write - return next(), after this whatever is written after next() will not execute
+
+app.use(middleware-function) will execute for all request like get, post, put, patch and delete
+
+
+
+
+Creating Utility Middleware:
+Logger

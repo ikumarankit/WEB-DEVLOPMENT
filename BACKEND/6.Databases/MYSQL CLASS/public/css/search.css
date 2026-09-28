@@ -1,0 +1,139 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    /* width: 90%; */
+    /* max-width: 900px; */
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.user-table th, .user-table td {
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.user-table th {
+    background: #2575fc;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.user-table tr:hover {
+    background: #eef4ff;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #1a5ed1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Special styling for join button */
+.join-button {
+    margin-left: 1rem;
+    background: #ff6a88;
+}
+
+.join-button:hover {
+    background: #e05572;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Search bar container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+}
+
+/* Search input */
+#searchBar {
+    width: 60%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+}
+
+#searchBar:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+/* Search button */
+.search-btn {
+    padding: 0.7rem 1.2rem;
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #1a5ed1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

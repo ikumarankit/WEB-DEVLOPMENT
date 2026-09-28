@@ -1,0 +1,11 @@
+Strategy for JavaScript
+1.Think about or Figure out what steps we need 
+2.Convert those steps into code 
+
+In this lesson we learn about booleans and if else statement:
+1.Boolean values(true, false)
+2.If-statements
+3.learn how to use comparison operators(>,<, >=, <=, ===, !==) and Logical operators(&&, ||, !)
+4.Algorithms, and created Rock Paper Scissors
+5.Truthy and Falsy values 
+6.Shortcuts for if-statements(ternary, guard, default operator)

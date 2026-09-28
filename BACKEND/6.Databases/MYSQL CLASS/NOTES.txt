@@ -1,0 +1,213 @@
+Using Faker:
+In this chapter we are going to see how database is used in the backend 
+how we can use server to create, update and delete data from the database 
+first we install package name Faker that generates fake data
+
+
+
+
+
+MySQL2 Package:
+To connect Node with MySQL
+Till now our backend and MySQL is a separate entities 
+MySQL2 is a package that is used to build connection between database and our server till now we write server on index.js and sql queries on MySQL workbench now we connect both of them using this package 
+
+to end the connection we use 
+connection.end(); // to close connection 
+
+
+
+
+
+
+Till now we learn three ways to execute our sql commands:
+1. workbench
+2. MySQL2 package -> index.js -> connection object -> connection.query
+3. in CLI terminal using mysql -u root -p 
+
+4. using sql files
+now 4th one is for running big queries:
+we can also make sql file and execute it
+create schema.sql 
+go to MySQL Shell using mysql -u root -p
+and then run source schema.sql 
+
+
+
+
+
+CREATE user TABLE:
+till now we see we can do changes in database using 4 ways 
+now we will full focused on accessing database using index.js file and executing different different queries using node.js means index.js means from backend only
+
+
+
+
+
+INSERT data in user TABLE:
+using placeholders:
+basically placeholders are ? in queries
+if we want to add values or something dinamically then we use placeholders in connection.query parameter
+
+by default response when we insert data in table:
+ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0,
+  changedRows: 0
+}
+in this lesson we manually create data and insert it into user table now we use faker for this
+
+
+
+
+
+INSERT in Bulk:
+using faker 
+
+
+
+
+
+Routing:
+Routing means:
+👉 Deciding what should happen when a user visits a specific URL (path).
+/users/:id → Path
+GET /users/:id → Endpoint
+http://localhost:3000/users/5 → URL
+
+Term	Meaning
+URL	Full address (protocol + domain + path)
+Path	Only route part (/users/5)
+Endpoint	API access point (GET/POST + path)
+
+
+🔹 Simple Example
+When you visit:
+/ → Home Page
+/about → About Page
+/contact → Contact Page
+👉 Routing decides which code runs for each URL
+
+
+We already know about the REST full APIs
+how we create different different routes using REST 
+Now here also we create different different routes:
+
+now we already have 100 data in database:
+now we create some routes here:
+A route is a specific URL + method in your backend
+app.get("/users", (req, res) => {
+    res.send("Users list");
+});
+✔ /users = route
+✔ GET = method
+
+An API (Application Programming Interface) is a collection of routes
+/users        GET
+/users        POST
+/users/:id    DELETE
+👉 All together = Users API
+
+Relationship:
+Route = Single endpoint  
+API   = Collection of endpoints
+API = Restaurant 🍽️  
+Route = Menu item 📋
+API = full system
+Route = single operation
+
+
+
+GET   we create home routes to show no. of users in database 
+
+
+Routes:
+1.
+GET    /user   
+-show all users(id, username, email) we can use ejs 
+
+2. EDIT route
+PATCH    /user/:id   
+-username edit 
+
+Here we combine REST API concept with database 
+
+3. ADD route
+POST   /user
+-new user add
+
+4. DELETE route 
+DELETE  /user/:id 
+-delete user 
+but before delete we want password 
+
+Till now we learn everything in pieaces now we merge everything and creates something with combination of everything we learn till now by pieces 
+
+
+
+
+
+Setting up Express App 
+1st route:
+HOME route:
+GET/    Fetch & show total number of users on our app
+
+
+
+
+
+Add Template for 1st route:
+using ejs templates 
+what is the flow of request response:
+
+1.Client(frontend) sends request to server
+2.Server(backend) sends request to database
+3.Database sends response to server 
+4.server embedded the response with ejs or templates 
+5.and then server send embedded ejs response to client 
+
+and this process is very very fast 
+
+
+
+
+
+2nd route:
+GET/user      Fetch & show (userId, username, email) for all users 
+
+
+
+
+
+
+3rd route (EDIT route):
+GET/user/:id/edit      To get form to edit the username, based on id 
+This form will require a password
+
+
+PATCH/user/:id  To edit username, if correct password was entered in form 
+in this route we have to do works:
+1. Search user based on id 
+2. Check if form password = user password
+3. Update username query 
+
+
+so in this chapter we discuss how node js and database interact with each other 
+
+
+
+
+
+HomeWork Tasks:
+1.Create a Form to Add a new user to the Database 
+/user    POST request
+
+2.Create a Form to Delete a User From Database if they enter correct email id & password.
+/user    DELETE request 
+
+
+In SQL many things more that we can learn like joins, views, trigger in database 

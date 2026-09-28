@@ -1,0 +1,114 @@
+#container {
+    height: 600px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+
+    /* container internal element overflow container when we dont give display property as flex  */
+    /* flex  */ 
+    display: flex;
+
+
+    /* flex direction  */
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    flex-direction: column;
+    flex-direction: row;
+
+
+
+
+    /* justify content  */
+    justify-content: flex-start;
+    /* justify-content: flex-end;
+    justify-content: center; */
+
+    /* three more values of justify content  */
+    /* justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly; */
+
+
+    /* flex wrap  */
+    /* flex-wrap: nowrap;
+    flex-wrap: wrap-reverse;
+    flex-wrap: wrap; */
+
+
+    /* align items */
+    /* align-items: flex-start;
+    align-items: flex-end;
+    align-items: center; */
+
+    /* one more value of align items*/
+    /* align-items: baseline; */
+
+
+
+    /* align content  */
+    align-content: flex-end;
+    align-content: center;
+    align-content: flex-start;
+
+
+    /* three more values of align content */
+    /* align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly; */
+
+    /* one more option of align content */
+    /* align-content: baseline; */
+
+}
+
+/* align self */
+#orange {
+    align-self: flex-end;
+    align-self: flex-start;
+
+    /* flex basis  */
+    /* if we remove font size property then the main size will be exactly equal to 50px */
+    /* flex-basis: 50px; */
+
+
+    /* flex grow */
+    /* flex-grow: 1; */
+
+    /* flex shrink  */
+    /* flex-shrink: 1; */
+
+
+
+    /* flex sizing shorhand  */
+    flex: 2 2 100px;
+}
+
+
+/* flex basis  */
+#blue {
+    /* flex-basis: 400px; */
+
+    /* flex grow  */
+    /* flex-grow: 3; */
+
+    /* we can also limit the growth */
+    /* max-width: 400px; */
+    /* we can also limit the growth */
+    /* min-width: 400px; */
+
+    /* flex shrink  */
+    flex-shrink: 1;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}

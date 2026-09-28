@@ -1,0 +1,168 @@
+CSS CHAPER 06 
+CSS GRID
+
+
+
+CSS Grid: 
+.Setting a container's display to grid will make all children grid items 
+
+.till now we study flexbox which helps in making the layout of the element in one direction(if flex direction is row then we can make layout in horizontal direction and if flex direction is column then we can make layout in vertical direction) ussi tarike se elements ke layout ko design karne ke lia hamare paas css grid bhi hoti hai
+
+.CSS Grid is very similar to flex box but in flex box we design the layout in 1D(either row direction or column direction) whereas in Grid we design the layout of the elements in 2D(both direction)
+
+.Outer container = grid container
+.inner elements = grid items
+
+.if we want to apply grid property on any container then we make the display property of that container to grid
+
+.grid and flexbox both are important when we talk about the website design or layout but in most practical cases flexbox is used more
+.grid has specific use cases(when we design data in 2d layout or tabular form)
+
+.we we give display flex in previous section then the items will automatically arranged in row direction coz by default flex direction is row but when we give display grid then items arranged in column direction or vertical direction with extra space divided equally among items
+
+
+
+Grid Model:
+.before understanding grid properties grid model is important to understand
+.grid lines: lines in the grid layout (row-lines and column-lines)(l1, l2, l3, l4)
+(dotted purple lines while inspecting)
+.grid cell: box in the grid layout (items placed in the grid cell)
+.grid track: distance between two lines(l1 and l2)
+.to track grid layout we can track purple lines while inspecting
+
+Grid Layout:
+     column lines
+ r  ----|----|-----|------|------
+ o  ----|----|-----|------|------
+ w  ----|----|-----|------|------
+    ----|----|-----|------|------
+
+
+
+Grid Template:
+.They define the lines & track sizing of my grid container
+
+.grid-template-rows: track1-width track2-width track3-width (how many number of rows or tracks we have to create for grid)
+
+.grid-template-columns: track1-width track2-width track3-width (how many number of columns or tracks we have to create for grid)
+.jaise hi columns aaya waise hi itmes automatically rows and columns me arranged ho gye
+
+.there is one more value of grid-template-column: auto; by this whatever the empty space of the container is equally divided in the number of columns we spacefied by writing auto
+.if we write one auto then the width is divided in one column and if we write two auto then width is divided into two column equally and likewise for three,four etc
+.but in some case extra space is not equally divided in between columns because it is depends on how much content inside element are present so we are not used auto in practical cases either we put values using hard code 
+.grid layout says ki first item first grid cell me jayega aur second item second grid cell me jayega and likewise
+
+
+
+Grid Template(repeat):
+.Repeat is used to divide all available space 
+.jitni bhi available space bachi hai container ke paas usko equally divide karne ka auto se acha tarika repeat hai
+
+.grid-template-rows: repeat(count, 1fr)
+.grid-template-rows: repeat(2, 1fr)
+(1fr means 1 fraction of 100% available space(height in terms of rows)) (jitne hame rows ya track chahiye wo ham count me likh dete hai)
+.grid-template-columns: repeat(count, 1fr) (1fr means 1 fraction of 100% available space(width in terms of columns)) (jitne hame columns ya track chahiye wo ham count me likh dete hai)
+.grid me 1d ke andar chijo ko dekhna is not good idea like sirf row ki terms me divide kia columns me nahi kia 
+.islia jab bhi hame 1d layout design karne hai (yani sirf rows ke andar items chahiye ya fir sirf columns ke andar items chahiye) then we use flexbox not grid
+.we use grid when we have to design a layout where rows and columns both are necessary 
+.grid ka usecase best tabhi hota hai jab ham rows and columns ko ek sath use karte hai na ki individually 
+
+one more way to write repeat in css 
+.grid-template-rows: 1fr 1fr 1fr 1fr is same if we write:
+.grid-template-rows: repeat(4, 1fr)
+
+
+
+Grid Gaps:
+.They define the gaps between the lines 
+.if we want we can give the gaps between rows and columns 
+.agar hamne grid layout ke andar items ko place kia hai aur hame items ke bich me gaps chahiye then we can use grid gap property for rows and columns
+
+.row-gap: 10px
+.column-gap: 10px
+.grid-gap: rowGap columnGap
+
+
+
+Grid Columns: 
+.Defines an item's starting & ending position inside the column  
+.if we want to place a particular item to some starting column position to ending column position then we use grid column property for that particular item
+
+.grid-column-start: line number  (starting line of the column for that particular item)
+.grid-column-end: line number  (ending line of the column for that particular item)
+
+.if we initialize the item with particular height and width then only the space is reserved for the item, an item is not placed to the spacefied starting and ending column line 
+
+.we can combine these two properties 
+grid-column: start column / ending column 
+
+.one more way of defining grid column is:
+grid-column: start column / span number (here number is ki aapko starting line ke baad kitne aur boxes chahiye ya kitne cells chahiye ya kitne aur columns chahiye)
+.grid-column: 1 / span 3 likhne ka same matlab hai ki grid-column: 1/4
+.that how we can use span keyword when we deciding our grid column for particular item 
+
+
+
+Grid Rows: Defines an item's starting & ending position inside the row 
+.if we want to place a particular item to some starting row position to some ending row position then we use grid row property for that particular item
+
+.grid-row-start: line number  
+.grid-row-end: line number 
+
+.we can combine these two properties 
+grid-row: start row / ending row 
+
+.one more way of defining grid row is:
+grid-row: start row / span number
+(starting line ke baad kitne aur rows chahiye)
+
+.if we initialize the item with particular height and width then only the space is reserved for the item, an item is not placed to the spacefied starting and ending row line 
+
+.to iss tarike se ham grid ke lia ya fir particular item ke lia uska row and column bhi decide kar sakte hai 
+
+
+
+Common Properties:
+.used for elements allignment like for flex items we use justify content, align content etc
+-> Horizontal allignment 
+.if we want to align items horizontally 
+
+.justify-items (container ke saare items ko horizontally align karne ke lia use kar sakte hai)
+-> (if we set it to start then items in the cell placed in the start of the cell)
+-> (if we set it to end then items in the cell placed in the end of the cell)
+-> (if we set it to center then items in the cell placed in the center of the cell)
+
+.justify-self  (for particular item)
+.work same like justify items but for particular item 
+
+-> Vertical 
+.if we want to align items vertically
+
+.align-items (container ke saare items ko vertically align karne ke lia use kar sakte hai)
+-> similar to justify items but in vertical direction 
+-> (if we set it to start then items in the cell placed in the start of the cell)
+-> (if we set it to end then items in the cell placed in the end of the cell)
+-> (if we set it to center then items in the cell placed in the center of the cell)
+
+.align-self  (for particular item)
+.work same like justify items but for particular item 
+
+.to iss tarike se hamara justify and align kaam karta hai 
+.in dono ko combine karke ham ek single property ko bhi use kar sakte hai 
+
+.if we want same allignment horizontally and vertically then we use place items
+.place-items (dono ki value same ho to ham use kar sakte hai place items ka)
+(container ke saare items ko vertically and horizontally same align karne ke lia use kar sakte hai)
+.place-self (container ke particular items ko vertically and horizontally same align karne ke lia use kar sakte hai)
+
+.to iss tarike se placing and allignment bhi set ho sakta hai hamare sare ke sare items ka 
+
+.we have one more value for display
+-> if we set container display property as grid then the container behaves or act as a block element (chahe wo pahle se block element ho ya na ho)
+
+-> if we want to display a grid container as an inline item or element then we can set the container as display property to inline grid yahi same chij ham inline flex ke sath kar sakte hai 
+
+
+
+
+

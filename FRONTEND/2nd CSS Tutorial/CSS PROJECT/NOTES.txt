@@ -1,0 +1,34 @@
+CSS PROJECT:
+
+.when we are building new projects we will learn some extra features and some addition things even though we know so much about tech
+
+.when we are building spotify clone we are not just learning how to build spotify clone we learn how to implement css properly in any project and with this process of coding you can also create your own projects
+
+.think it like a tutorial for what is the process for building projects
+
+.we link different pages using javaScript
+
+.we link all the important link in the head tag of the document
+.first we give some basic styling to our document so it will start from 0 without any default styling or extra space like margin:0 padding:0
+
+.overflow: 
+.jab bhi hamara text overflow hota hai yani hamare page ke upar bahot sara content hota hai to hame scroll bar dikhai deta hai becuase of "overflow: scroll" property value
+
+.we can set overflow to hidden to not show the scroll bar if the content overflow 
+
+.we set body to overflow hidden becuase sari websites par hamara jo content hai wo scroll na ho agar kisi particular div,box ke content ko scroll karna hai then we set the overflow to scroll for that particular div,box etc. jitne part me scrollable ki jarurat ho sirf utne part me scroll karwa rahe ho 
+
+.flex:1
+-> means if we set flex:1 to any element then it will take all the remaining space of the container
+
+.1rem = 16px on my browser window
+-> becuase root ka font size is by default 16px
+
+
+.to style your divs vertically you can set flex-direction to column which is really good 
+
+.we can set line height for an element(kitna area occupy karegi) rather than setting height 
+
+.new property 
+-> appearence
+.if we want to remove all preset styling of an element then we can set appearence to none 

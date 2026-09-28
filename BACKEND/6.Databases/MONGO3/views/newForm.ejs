@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>New Message</title>
+  <link rel="stylesheet" href="/newForm.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Send a New Message</h2>
+    <form action="/chats" method="POST">
+      <label for="from">From:</label>
+      <input type="text" id="from" name="from" placeholder="Your name" required>
+
+      <label for="to">To:</label> 
+      <select id="to" name="to" required>
+        <option value="">-- Select Recipient --</option>
+        <option value="Aman">Aman</option>
+        <option value="Babita">Babita</option>
+        <option value="Charlie">Charlie</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</body>
+
+</html>

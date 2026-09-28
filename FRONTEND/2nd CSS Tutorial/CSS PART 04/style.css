@@ -1,0 +1,190 @@
+/* aplha channel  */
+/* div {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255,0,0,0.5);
+    background-color: #ff0000ff;
+} */
+
+/* opacity */
+/* #opacity {
+    background-color: #ffa511;
+    opacity: 0;
+} */
+
+
+
+/* transition */
+/* div{ */
+    /* height: 100px;
+    width: 100px;
+    background-color: #4dff00ff; */
+
+    /* transition-duration  */
+    /* transition-duration: 1s; */
+
+    /* transition delay  */
+    /* transition-delay: 1s; */
+
+
+    /* margin: 0 auto;
+    margin-top: 10px; */
+
+    /* transition shorthand */
+    /* property name | duration | timing-function | delay */
+    /* transition: margin-top 2s ease-in 0.2s; */
+
+/* } */
+
+/* div:hover { */
+    /* background-color: aquamarine; */
+    /* border-radius: 50%; */
+
+    /* margin-top: 400px; */
+    /* background-color: aquamarine; */
+/* } */
+
+
+
+/* transform */
+/* section {
+    margin-top: 100px;
+}
+div {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px auto;
+}
+
+div:nth-of-type(2n) {
+    background-color: #f7db6a;
+}
+div:nth-of-type(3n) {
+    background-color: #ebb02d;
+} */
+
+/* (i) rotate  */
+/* #one {
+    transform: rotate(45deg);
+} */
+
+
+/* (ii) scale  */
+/* #two { */
+    /* transform: scale(0.5); */
+
+    /* individually scale along x and y axis  */
+    /* transform: scale(0.5, 2); */
+    /* transform: scaleX(0.5); */
+    /* transform: scaleY(0.5); */
+/* } */
+
+
+/* (iii) translate */
+/* #three { */
+    /* moves along both x and y axis */
+    /* transform: translate(100px, 100px); */
+
+    /* individually translate along x and y axis  */
+    /* transform: translateX(300px); */
+    /* transform: translateY(5px); */
+
+    /* can also move backward */
+    /* transform: translateX(-300px); */
+/* } */
+
+
+/* (iv) skew */
+/* #four { */
+    /* transform: skew(30deg); */
+
+    /* on 90deg it gets completly skewed */
+    /* transform: skew(90deg); */
+/* } */
+
+
+/* apply all transform properties values together  */
+/* #five {
+    transform: rotate(30deg) translateX(150px) ;
+} */
+
+
+
+/* box shadow  */
+/* div {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    margin: 10px auto;
+    box-shadow: 2px 2px 8px black;
+} */
+
+
+
+/* background image  */
+/* div { */
+    /* width: 400px; */
+    /* height: 200px; */
+    /* background-color: #7aa874; */
+    /* margin: 10px auto; */
+    /* background-image: url("bg.jpg"); */
+    /* background-size: contain; */
+    /* background-size: auto; */
+
+    /* mostly used is cover */
+    /* background-size: cover; */
+    /* color: white; */
+/* } */
+
+
+
+/* position property  */
+/* (i). static position */
+div {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+
+#static {
+    background-color: yellow;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+/* (ii). relative position  */
+#relative {
+    background-color: yellow;
+    position: relative;
+    /* offset  */
+    top: 100px;
+    left: 100px;
+}
+
+/* (iii). absolute position  */
+#absolute {
+    background-color: yellow;
+    position: absolute;
+    /* offset  */
+    /* pure page se 100px measure hue hai  */
+    top: 100px;
+    left: 100px;
+}
+
+/* (iv). fixed position  */
+#fixed {
+    background-color: yellow;
+    position: fixed;
+    /* offset  */
+    top: 100px;
+    left: 100px;
+}

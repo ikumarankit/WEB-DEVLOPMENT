@@ -1,0 +1,16 @@
+.outerDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: space-around;
+}
+
+.innerDiv {
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.innerDiv p {
+    text-align: center;
+}

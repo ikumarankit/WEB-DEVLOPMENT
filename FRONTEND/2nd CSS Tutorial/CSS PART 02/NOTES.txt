@@ -1,0 +1,131 @@
+Selectors: used to select element whose style we want to change
+There are different types of selectors in CSS.
+(i). Universal Selector(*): To select everything in a document
+Not used in real life websites because this will change everything in the website whereas in real life websites we have to change things in small small changes.
+
+(ii). Element Selector(element name): Selects all elements of the same type
+You can also select multiple elements seprated by comma(,)
+
+(iii). Id Selector(#): Selects an element based on the value of the elements id attribute
+It is not advisabel to give same id to multiple elements
+In programming we must give intutive names of id and classes
+It is used to apply style on a particular element
+
+(iv). Class Selector(.): Selects an element based on their class attribute
+If we want to group multiple elements then we used class attribute
+We can give same class to multiple different types of elements
+
+Practice Question
+There are multiple way to apply style
+
+(v). Descendant Selector: 
+Eg. selects all paragraph inside divs
+Eg- div p {
+    property: value; 
+}
+For better use or common use we can also give class to outer element 
+It is used to select multiple types of element in my html document.
+We can also use Descendant selector for more than two level
+Direct Descendant jaruri nahi hai 
+
+Combinator: When we want to use multiple selector then Combinator is used to combine them
+There are different Combinators in css:
+(i).Adjacent Sibling Combinator(+): 
+Eg- Heading3 that comes immediately after any paragraph
+p + h3 {
+    p:v;
+}
+
+(ii). Child Combinator(>): 
+Eg- Selects all buttons which are direct children of spans
+span > button {
+    p:v;
+}
+Direct Descendant hona jaruri hai jabki Descendant selector me ye jaruri nahi tha 
+Descendant selectors will be used more frequently than child Combinator in practical usecases
+
+Selector:
+(vi)Attribute Selector[attr="value"]: Selects elements based on the presence or value of a given attribute
+input[attr="value"] {
+    p:v;
+}
+we can also selects element based on the presence of attribute only even without attributes value
+we can use attribute selector by multiple ways search attribute selector on mdn by mozilla a developer guide 
+
+Practice Question
+
+
+Pseudo Class: A keyword added to a selector that specifies a special state of the selected elements
+We use Pseudo class when we want to change css based on states of the elements
+syntax-  element(or group of elements):PseudoClass(specifies special state)
+4 major pseudo classes:
+:hover
+:active
+:checked
+:nth-of-type : imagine you have multiple elements that you want to change or apply css for only the odd elements then you will use nth of type pseudoclass.
+
+specificity: describe which css property gets priority and which css priority doesn't
+
+Pseudo Elements : A keyword added to selector that lets you style a specific part of the selected elements
+::first-letter
+::first-line
+::selection
+
+
+CSS: Cascading StyleSheets
+What is cascade in CSS?
+The CSS cascade algorithm's job is to select CSS declerations in order to determine the correct values for CSS properties
+Cascading properties apply on a same element(or selectors)
+same element is necessary
+Jo chij baad me define ki gyi wo laagu hongi
+if there is multiple css files for one document then the last included css file properties will be applied
+selector must be same for Cascading property 
+
+Cascading properties:
+Imagine you add multiple css files for one html document then the last include css files css properties will be applied.
+Cascading properties kahti hai jo chij baad me aayi wo lagu hogi
+
+When selectors is different then before cascading properties we first check elements or selectors specificity
+specificity: is an algorithm that calculates the weight that is applied to a given CSS declaration.
+When selectors types are different we calculate a value for each selectors called specificity.
+
+specificity in mathematical term is a three digit number which is calculated
+
+Importance:
+Id > Class, attribute, pseudoclass > Element, pseudoelement
+
+Remember:
+(i) id>class>element
+(ii) more selectors > less selectors
+because jitne jayada aap selectors ko use karenge utni jayada aapki css ko priority mil rahi hogi.
+(iii) if specificity same then we check cascading properties 
+
+Inline specificity: Inline styles are more specific than id
+inline style has the highest priority.
+
+
+!important: To show the most specific thing in document 
+
+h2 {
+    background-color: blue !important;
+}
+
+Inheritance in CSS: lets say we create ul inside paragraph and paragraph inside div and if we set any properties like color for div then this properties can also be inherited by elements inside div by Inheritance
+
+input boxes aur button by default properties ko inherit nahi karte so we have to use inherit keyword to inherit the parent properties
+
+Remember:
+(i) Every elements wants to inherit properties of their parents if it does not have its own properties if parents has no properties then it inherit properties from ancestors.
+(ii) Not all element can inherit parents properties like button and input elements.
+
+We can check which css properties looks good or which not by changing its properties using inspect in the browser
+
+bahut sari css ki chije hai jo ham browser ke andar hi manipulate kar sakte hai aur hame ye aana chahiye
+
+bahut sari chije hai jo ham browser par hi test kar sakte hai ki kon si chij achi lagegi aur kon si chij achi nahi lagegi 
+
+kon sa colour aapke websites aapke projects pe acha lagega uske lia bahut sare online color palletes mil jayenge 
+like coolors, canva, my color space 
+
+In Inheritance har property by default inherit nahi hoti.
+like width, height, border etc

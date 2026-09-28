@@ -1,0 +1,65 @@
+.box {
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+
+    /* animation properties  */
+    animation-name: widthAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: normal;
+
+
+    /* animation properties shorthand  */
+    /* animation: widthAnimation 3s ease-in 0s infinite normal; */
+
+    animation: colorAnimation2 3s ease-in 0s infinite normal;
+}
+ 
+
+/* Animation template or blueprint*/
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimation {
+    from {
+        background-color: aquamarine;
+    } 
+    to {
+        background-color: blue;
+    }
+}
+
+@keyframes widthAnimation {
+    from {
+        width: 10px;
+
+        /* we can also set multiple properties for a single element  */
+        font-size: 20px;
+    } 
+    to {
+        width: 400px;
+        font-size: 40px;
+    }
+}
+
+
+@keyframes colorAnimation2 {
+    0% {
+        background-color: aquamarine;
+    } 
+    50% {
+        background-color: aqua;
+    }
+    100% {
+        background-color: blue;
+    }
+}

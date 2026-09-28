@@ -1,0 +1,7 @@
+In this lesson:
+1.Numbers and Math
+2.Order of Operations, and Brackets(...) (Operator Precedence)
+3.Calculated the numbers in final project
+4.Calculations using the floats can be inaccurate 
+5.How to round numbers (Math.round())
+6.How to search for code on our own (Search for what you trying to do like JavaScript How to round a number)

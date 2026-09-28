@@ -1,0 +1,162 @@
+/* Universal Selector  */
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Element Selector  */
+h3 {
+    color: purple;
+} 
+
+h1,h3 {
+    color: #b92b27;
+}
+
+
+/* Id Selector  */
+#login {
+    background-color: white;
+    color: black;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+
+/* Class Selector  */
+.upvote {
+    background-color: green;
+    color: aliceblue;
+}
+
+
+/* Descendant selector  */
+p a {
+    color: purple;
+    background-color: bisque;
+}
+
+.post a {
+    color: purple;
+    background-color: bisque;
+}
+
+nav a {
+    color: pink;
+}
+
+
+/* Adjacent Sibling Combinator  */
+p + h3 {
+    text-decoration: underline;
+}
+
+.upvote + button {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+
+/* Child Combinator  */
+div > input {
+    background-color: cornsilk;
+}
+
+
+/* Attribute Selector  */
+input[type="text"] {
+    color: green;
+}
+
+input[type="password"] {
+    color: red;
+}
+
+input[type] {
+    background-color: burlywood;
+}
+
+
+
+
+/* Practice Question  */
+/* Decendent selector  */
+#myId p {    
+    color: green;
+}
+
+/* attribute selector + decendent selector */
+div[id="myId"] p {
+    color: green;
+} 
+
+
+
+
+/* Pseudo Class  */
+/* hover  */
+button:hover {
+    background-color: black;
+    color: white;
+}
+/* specificity: property or algorithm that decides which css gets priority and which css doesn't */
+
+h3:hover {
+    text-decoration: overline;
+}
+
+/* active : when elements clicked  */
+button:active {
+    background-color: pink;
+}
+
+/* Agar jo chij hamne id ke help set kardi wo maximum cases me change nahi hoti..  */
+
+p:active {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+/* checked  -> used for radio buttons or checkboxes  */
+input[type="radio"]:checked + label{
+    font-weight: bold;
+    color: red;
+}
+
+/*   **Very Very Important**  :nth-of-type ->  */
+/* helps you selects nth element  */
+div:nth-of-type(2n + 1) {
+    background-color: darkgrey;
+}
+/* Explore more about :nth-of-type on mdn  */
+
+
+/* Pseudo Element */
+/* ::first-letter */
+/* ::first-line */
+/* ::selection */
+
+h1::first-letter {
+    color: black;
+}
+
+p::first-line {
+    color: purple;
+}
+
+/* most frequently used  */
+p::selection {
+    background-color: black;
+}
+
+
+/* Cascading */
+h3 {
+    background-color: #b92b27;
+}   
+h3 {
+    background-color: bisque;
+}

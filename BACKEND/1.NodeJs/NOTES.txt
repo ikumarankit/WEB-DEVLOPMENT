@@ -1,0 +1,104 @@
+Node.js
+It is a JavaScript runtime environment
+It is used for server side programming 
+Node.js is not a language, library or framework 
+Node.js is used to build command line tool 
+Node.js is also used to develop games
+Used inside IOT devices (drones software)
+.we imagine Node.js like it is JavaScript runtime environment along with there is multiple tools inside Node.js it help JavaScript to run outside the browser
+
+Why Node.js Helpfull?
+1.It is very popular 
+2.Based on JavaScript so we dont need to learn extra or other programming languages to learn backend or to make web servers 
+
+First talk about:
+Node Installation 
+download from nodejs.org
+check in commandline by node -v 
+
+VS code is built on Node.js 
+Node.js is not only used for server side programming it has multiple use cases
+
+
+
+
+
+Node REPL:
+to open Node REPL(JavaScript runtime environment) we write node in git bash or any terminal then we move from the terminal to the node world or JavaScript world(we can say JavaScript runtime environment) where terminal commands will not be executed only node or JavaScript commands executed 
+.help commands gives us some basic commands 
+.we cannot manipulate DOM for any elements in Node REPL coz we dont have access to browser 
+
+
+
+
+
+How to create Node Files and Execute it?
+we can create node files with extension .js and execute it through terminal using node fileName
+
+
+
+Process:
+process: This object provides information about, and control over, the current Node.js process 
+process.argv: returns an array containing the command-line arguments passed when the Node.js process was launched.
+
+
+
+module.exports
+used to transfer data from one file to another
+requiring files 
+require(): a built-in function to include external modules that exits in separate files.
+module.exports: a special object 
+.if A file doest not export anything but B file require A file then it will output an empty object
+
+
+
+module.exports 
+requiring directories
+require(): a built-in function to include external modules that exits in separate files.
+module.exports: a special object 
+
+
+
+NPM(Node Package Manager)**
+npm is the standard package manager for Node.js
+1. library of packages
+eg. express.js and react.js are the packages that is available inside node 
+2. NPM is a command line tool through which we can install packages available inside node we can also decide what version of package we need  
+3.comes preinstall with node
+
+
+
+Installing Packages through NPM 
+npm install <package name>
+whenever we install any npm packages then package.json and package-lock.json and node_modules folder will install generally
+
+
+node_modules: The node_modules folder contains every installed dependency for your project.
+package-lock.json: It records the exact version of every installed dependency, including its sub-dependencies and their versions.
+jo packages ham install karte hai wo ek tarike se hamari dependency ban jate hai jinko use karke hamara project kaam karne wala hai 
+
+
+
+package.json:
+The package.json file contains descriptive and functional metadata about a project, such as a name, version and dependencies
+whenever we want to share our project with other or push our project on github we dont push node_modules directory we only push package.json
+it comes when with the library that we install using npm 
+but if we want we can individually initialize a package.json file using npm init
+
+
+
+Till now we install node packages locally means we can only use the packages only in directory where we install it
+Local installation is the best practice  
+Local v/s Global
+npm install -g <Package name>
+npm link <package name>
+
+
+
+require v/s import 
+in ES6
+import {sum} from "./math.js"
+We can't selectively load only the pieces we need with require but with import, we can selectively load only the pieces we need, which can save memory.
+Loading is synchoronous for 'require' but can be asynchronus for 'import'
+we have to do require or else import not both
+we have to add "type": "module" in package.json file in the directory where we use import and export

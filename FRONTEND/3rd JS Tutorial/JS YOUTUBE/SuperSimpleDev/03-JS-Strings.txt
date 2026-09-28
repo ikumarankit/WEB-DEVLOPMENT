@@ -1,0 +1,9 @@
+In this lesson:
+1.Learn about Strings (represents text)
+2.Use strings and numbers together
+3.Three different ways to create strings:
+'....', "....", `....`(template strings)
+4.Escape characters: \'  \n
+5.Two feature of Template String 
+(i). Interpolation
+(ii). multi-line strings

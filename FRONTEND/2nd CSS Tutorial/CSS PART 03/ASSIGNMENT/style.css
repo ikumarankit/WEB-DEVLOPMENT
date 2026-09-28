@@ -1,0 +1,31 @@
+/* Question no.1  */
+/* div {
+    height: 150px;
+    width: 300px;
+    background-color: grey;
+    border: 3px dotted black;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+} */
+
+
+/* Question no.2  */
+/* div {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+} */
+
+
+/* Question no.3  */
+/* bullets points gets disappear */
+li {
+    display: inline;
+}
+

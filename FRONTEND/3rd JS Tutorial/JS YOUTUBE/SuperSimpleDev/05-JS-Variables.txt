@@ -1,0 +1,7 @@
+In this lesson:
+1.Variables = a way to save values and use them later 
+2.Re-assign a Variable
+3.Created the Cart quantity feature
+4.Shortcuts for re-assigning a variable
+5.Naming conventions and best practices for variable names
+6.3 ways to create a variable: let,const and var

@@ -1,0 +1,59 @@
+CSS MEDIA QUERIES:
+
+Media Queries:
+.Help create a responsive website 
+.ek website ka responsive hona yani hamare device ki properties(size of screen) ke according uska change ya modify ho jana taki hamara ui sundar lage wo website achi lage 
+
+.To check the responsiveness of a website or webpage we can go to device mode in dev tools
+
+.To understand media queries we take an example: 
+.hamara jo bhi device/environment(system where we open our webpage or websites) hota hai uske kuch particular media features (properties) hote hai like width, height, orientation mode(landscape or portrait)
+
+media features - width(of viewport (viewport width is the visible part for the device)(browser me jitna bhi hamara website ke lia part hai wo hamara viewport hoga))
+.har modes aur properties ke hisab se hamare websites ke andar kuch responsive changes hone chahiye
+.to jin properties ke hisab se changes aate hai unko ham media features kahte hai and there is so many properties
+
+
+.here is the example of ki mere device ki jo bhi width hai uske hisab se meri website kaise responsive bane so here media feature is width 
+@media(width: 400px){
+    div {
+        background-color: red;
+    }
+}
+
+.we can change multiple properties inside one queries
+.we can also write multiple queries 
+
+.to iss tarike se ham media queries ko likhte hai 
+
+.we can also write media queries with min-width and max-width infact exactly wala ka ham jayada use nahi karte min-width and max-width ka hi use karte hai 
+
+.if minimum width is 400 px or greater then we use this:
+@media(min-width: 400px){
+    div {
+        background-color: red;
+    }
+}
+
+.if maximum width is 400 px or smaller than 400px then we use this:
+@media(max-width: 400px){
+    div {
+        background-color: red;
+    }
+}
+
+.we can also mixed multiple dimensions 
+.yaha baat ho rahi hai 200px se 300px ki range ki
+.to jab bhi mujhe range set karni hai to ham and ko use kar sakte hai
+@media(min-width: 200px) and (max-width: 300px) {
+    div {
+        background-color: red;
+    }
+}
+.to iss tarike se ham multiple queries ko club bhi kar sakte for a range 
+
+
+
+.Media Queries for media feature: orientation(of viewport)
+
+.here we define the media queries on device orientation so media feature is orientation

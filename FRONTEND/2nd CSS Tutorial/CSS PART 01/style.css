@@ -1,0 +1,97 @@
+/* External StyleSheet  */
+/* h1 {
+    color: red;
+} */
+
+
+/* Color Property 
+/* BACKGROUND COLOR PROPERTY */
+/* h1 {
+    color: blue;
+    background-color: grey;
+}
+
+p {
+    color: blueviolet;
+    background-color: blanchedalmond;
+}
+
+button {
+    color: black;
+    background-color: bisque;
+} */
+
+
+
+/* Practice Qs */
+/* h2 {
+    color: orange;
+}
+button {
+    color: white;
+    background-color: blue;
+}
+P{
+    color: white;
+    background-color: black;
+} */
+
+
+/* Color System  */
+/* h1 {
+    color: red;
+    color: teal;
+    color: rgb(0,255,0);
+    color: rgb(255,255,0);
+    color: #000000;
+    color: #000;
+    color: #0000ff;
+    background-color: #000000;
+} */
+
+
+/* Practice Qs  */
+
+
+
+/* TEXT RELATED PROPERTIES */
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: wavy red underline;
+    letter-spacing: 5px;
+    letter-spacing: normal;
+    font-family: arial;
+    font-family: serif;
+    font-family: avant garde, didot, sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-weight: bold;
+    font-weight: 400;
+    line-height: 0.5;   /* 0.5 times of normal */
+    line-height: 2.5;
+    line-height: normal;
+    /* Font size unit */
+    font-size: 18px;
+}
+
+h2 {
+    font-weight: normal;
+    font-weight: 800;
+    font-family: impact;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Practice Qs */
+
+
+
+
+
+

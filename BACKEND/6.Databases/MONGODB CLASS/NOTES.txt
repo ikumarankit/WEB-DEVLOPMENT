@@ -1,0 +1,205 @@
+Mongoose:
+It is an npm package or library.
+A library that creates a connection between MongoDB & Node.js JavaScript Runtime Environment. 
+It is one of the ODM (Object Data Modeling) Library. 
+Our end goal is how we can use mongoDb database with our express app
+but before that we will learn how we can use mongoDb database using plain javascript and to control database using javascript code 
+if we want to create schema for our database collections then also we can use mongoose 
+also it is used to execute complex query 
+
+
+
+
+
+Installation & setup:
+npm install mongoose 
+
+
+
+
+
+Schema:
+when we talk about mongoose two important terms that we need to understand:
+1. Schema
+2. Models
+
+1.Schema: Overall structure, in sql the Overall structure is table columns, constraints, datatypes 
+Schema defines the shape of the documents within that collection.
+we can define schema for collection and every documents follow that schema 
+
+
+
+
+
+
+2. Models 
+Model in mongoose is a class with which we construct documents or we can construct collection in mongoDb
+mongoose Models are javascript class which are the representation of documents of the collection 
+we use models to create documents with the help of  mongoose
+
+Ab ham javascript me baithe baithe mongoDb database me manipulation kar paa rahe hai 
+
+
+
+
+
+INSERT 
+how we can insert document in collection using mongoose: 
+Inserting one: one document at a time
+before inserting document first we have to create it 
+const user1 = new User({name: "Adam", email: "adam@gmail.com", age: 48}); 
+const user2 = new User({name: "eve", email: "even@gmail.com", age: 28}); 
+
+so in Mongoose:
+Model class represents collection 
+and objects of this Model class represents documents
+
+
+
+
+
+INSERT
+Inserting multiple
+Generally when we deal with API or express app we insert one data at a time but there can be exception where we have store multiple document together 
+
+Users.insertMany([
+    {name: "Tony", email: "tony@gmail.com", age: 33},
+    {name: "Rony", email: "rony@gmail.com", age: 23},
+    {name: "Bony", email: "bony@gmail.com", age: 13},
+]).then((data) => {
+    console.log(data);
+})
+
+.insertMany also returns promise so here also we can execute .then and .catch method  
+
+
+
+Note:
+when we do insertion using mongoose there is something called Operation Buffering 
+Mongoose uses Operation Buffering
+Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB. 
+
+
+
+
+
+FIND 
+Model.find()  // does not return promise it returns a Query Object(thennable means we can use .then() method)
+
+*Mongoose Queries are not promises. But then have a .then()
+
+User.find().then((data) => {
+    console.log(data);
+});
+
+so by using Model.find() method whatever data returns from the database we can filter it out in javascript and retrive or access the useful information 
+
+basically everything is about ki javascript me baithe baithe ham database me manipulation kar rahe hai 
+
+
+
+Model.findOne()  // returns a single result 
+User.findOne({age: {$gt 47}}).then((data) => {
+    console.log(data);
+}) .catch((err) => {
+    console.log(err);
+})
+
+_id key value or field is frequently used to search document in collection so there is a seprate method for it 
+
+
+Model.findById()  // return Query Object
+
+
+
+
+
+UPDATE:  // does not return promise it returns a Query Object which are thennable means we can use .then() method
+Model.updateOne()  
+User.updateOne({name: "Bony"}, {age: 48})
+    .then((data) => {
+        console.log(data);
+    })
+
+
+Model.updateMany()
+User.updateMany({age: {$gt: 45}}, {age: 45})
+    .then((data) => {
+        console.log(data);
+    })
+
+
+The above two methods for updating document gives metadata in result after updation 
+so we use the below methods if we want to immediately print the data that is being updated not the updated data it prints in prints the before updated data  
+
+i. Model.findOneAndUpdate({filter}, {update})  // it also return query object
+User.findOneAndUpdate({age: {$gt: 20}}, {age: 55})
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+ii. Model.findByIdAndUpdate({filter}, {update})
+User.findByIdAndUpdate(, {age: 55})
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+
+
+
+
+
+DELETE:
+Next we will discuss how we can delete documents with the help of mongoose 
+Model.deleteOne(condition, option)   // return count 
+User.deleteOne({name: "Adam"})
+    .then((data) => {
+        console.log(data);
+    })
+
+Model.deleteMany(condition, option)  // it return query object with the property deletedCount 
+User.deleteMany({age: {$gt: 45}})
+    .then((data) =>  {
+        console.log(data);
+    })
+
+
+
+
+
+Schema Validations
+Basically, Rules for Schema 
+const bookSchema = mongoose.schema({
+    title: {
+        type: String, 
+        required: true,
+    },
+    author: {
+        type: String,
+    },
+    price: {
+        type: Number,
+    },
+});
+
+Like we write rules or constraints on columns in MySql likewise in mongoDb we can apply that rules or constraints called schema Validations
+
+
+
+
+
+Schema Validations
+SchemaType Options 
+required, min, default, category, etc. 
+you can go to the documentation of mongodb schematype Options 
+
+
+
+
+
+Schema Validation with UPDATE 

@@ -1,0 +1,22 @@
+An array is an object (it's a special type of object).
+so it have properties and methods 
+
+
+Standard Loop: For Loop
+Non Standard Loop: While Loop  like if we have to generate random number until we get 0.7 
+
+
+Main idea of javascript:
+1. Save the data
+2. Generate the HTML 
+3. Make it interactive 
+
+
+In this lesson:
+1. Arrays = list of values 
+2. Loops(while loop, for loop)
+3. Accumulator Pattern 
+4. Created a TODO list project
+5. Arrays are references, destructuring shortcut 
+6. More features of loops:
+    break, countinue, loops and array inside a function

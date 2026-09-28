@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users List</title>
+    <link rel="stylesheet" href="/users.css">
+</head>
+<body>
+    <div class="container">
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Edit Username</th>
+                    <th>Delete Account</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><button class="btn editButton" data-user-id="<%= user.id %>">Edit Username</button></td>
+                    <td><button class="btn deleteButton js-delete-button js-single-delete-button">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/search.js"></script>
+</body>
+</html>

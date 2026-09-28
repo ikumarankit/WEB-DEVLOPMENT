@@ -1,0 +1,33 @@
+/* For observing span vs div or block element vs inline element */
+
+/* h2 {
+    display: inline;
+    background-color: aquamarine;
+}
+
+span {
+    display: block;
+    background-color: burlywood;
+} */
+
+
+span {
+    /* background-color: aquamarine; */
+    border: 2px solid black;
+
+    height: 100px;
+    width: 200px;
+    /* margin and padding sets only left and right of the inline element not top and bottom */
+    padding: 50px;  
+    margin: 20px;
+}
+
+/* Now see what happed if we set same styling for the block element */
+
+div {
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 50px;  
+    margin: 20px;
+}

@@ -1,0 +1,92 @@
+In this lesson:
+1. Objects = group related values together 
+2. Added a score feature to Rock Paper Scissors Game
+3. Built-in Objects (JSON, localStorage)
+4. More Details about objects (null, Auto-Boxing, references)
+5. Shortucts (destructuring, Shorthand property, Shorthand method)
+What is object?
+objects let us group multiple vlaues together.
+objects store multiple property value pairs.
+we can access any objects values by using dot notation like
+objectName.propertyName
+
+Why we use objects:
+- make our code more organized
+- objects let us group multiple vlaues together.
+- objects let us use multiple values together 
+
+Dot Notation
+Bracket Notation 
+
+Built-in objects:
+(i).console
+(ii). Math
+(iii). JSON: help us work with JSON
+JSON:
+JavaScript Object Notation
+- a syntax
+- similar to JavaScript object 
+- but has less features
+Difference compared to JavaScript objects:
+- all property value pair are must be in double quotes in JSON
+- JSON doesn't support single quotes 
+- JSON doesn't support functions
+why we use JSON syntax rather than JavaScript object syntax because JavaScript object only make sense in JavaScript but on the other hand JSON syntax can be understood by many languages so JSON syntax is more universal 
+
+we use JSON:
+- when we send data between two computers that might use different programming languages 
+- when we store data 
+
+so Built-in JSON object helps us: 
+- convert JavaScript object => JSON
+- JSON.stringify()
+
+now let's learn how to convert back: 
+- JSON => JavaScript Object
+- we use another method in Built-in JSON object that is: 
+- JSON.parse()
+
+
+(iv). localStorage
+- localStorage object is used to save values more permanently 
+- so far we've been saving our values in variables however
+- variables are temporary they only exits on the current page
+- if we refresh the page / close the page, all the variables are deleted
+- localStorage doesn't get deleted when we refresh the page
+- method to save a value in localStorage is: localStorage.setItem()
+- localStorage only support strings
+
+
+
+More Details About Objects:
+(i). null: one of the falsy value in JavaScript similar to undefined they both represent that something doesn't have a value 
+Difference between null and undefined:
+we use null we intensionally want something to be empty
+
+(ii). Auto-Boxing: JavaScript automatically wraps the string into a special object this is called Auto-Boxing
+- 'hello'.length
+- 'hello'.toUpperCase()
+Auto-Boxing also works with other types of values like numbers and booleans 
+3.0.toString()
+true.toString()
+doesn't work with null and undefined
+
+(iii). Objects are references 
+objects are somewhere else in the memory, variables are just references 
+
+(iv). we can't compare objects directly 
+when we compare the variable that contains object then we compare the references, not the values inside the objects
+
+
+Last:
+Shortucts for objects:
+(i). destructuring:
+- const message = object.message;
+if variable name and property name is same then we can use: called destructuring
+- const { message } = object;
+so the destructuring Shortucts took the property out of the object and saved it in the message variable
+destructuring: easier way to take properties out of an object
+
+(ii). Shorthand Property:
+
+(iii). Shorthand Method

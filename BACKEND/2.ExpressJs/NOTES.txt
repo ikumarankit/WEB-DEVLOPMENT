@@ -1,0 +1,117 @@
+In this Chapter we will learn about Express.js
+But before we learn Express.js first we will learn about Library and Framework
+Library: 
+A Library is a collection of pre-written code that can be used to perform specific tasks.
+eg. axios
+
+Framework: 
+A Framework is a set of pre-written code that provides a structure for developing software applications.
+eg. express
+
+A library is a collection of reusable functions that you call in your code, while a framework provides a structured environment where the framework itself calls your code. In short, with a library you are in control, but with a framework the framework controls the flow (this is called Inversion of Control).
+
+Library: Like buying furniture for your house. You decide where to place it and how to use it.
+
+Framework: Like buying a pre-built house. The structure is already defined, and you must live within its layout, though you can decorate it.
+
+So, “decorate it” means you can personalize and extend the framework within its rules, but you can’t redefine its core architecture.
+
+“A framework is like a house you can furnish, but not rebuild.”
+
+
+Express: 
+A Node.js web application framework that helps us to make web applications 
+It is used for server side programming 
+
+4 Major usecase of Express:
+1. listen for incoming requests  like (Post, get, etc)
+2. parse the incoming requests based on node.js (javaScript) (not depends on what type of data is coming)
+3. to match response with routes (/ ke baad wala jo bhi naam likha hota hai usse ham routes kahte hai programming me like google.com/search here search is route)  (request actually aayi kaha par hai, request kon se path ya route pe aayi hai to uss path pe response match karne ka kaam bhi karta hai express)
+4. send suitable response 
+
+Express is a package inside node.js that we can install through npm and inside this package there are different tools and utilities that we can use to build server side or backend
+
+
+
+
+
+Getting Started with Express:
+now we will learn how we can create web api's using express 
+// server side web application is created through app object
+
+console.log(app); // print an object with different properties and methods
+// famous methods
+// 1. app.listen()  // used for listening incoming requests 1st uses of express
+
+
+// Ports are the logical endpoints of a network connection that is used for to exchange information between a web server and a web client 
+let port = 8080;  // 3000 used to make custom servers
+app.listen(port, () => {
+    console.log(`app is listening on port ${port}`);
+})
+
+
+
+
+
+Handling Requests:
+2. app.use();
+used to listen all types request and there is one callback function that is executed whenever there will be any request comes to the server
+
+we have to restart the server if we change something
+we use app.use to check if we got any request on server or not 
+
+
+
+
+
+Sending a Resopnse:
+Two object in detail: 
+1.request object (req)
+2.response object  (res)
+
+api requests or https request are text based but express converts this into an object (req object) this process is called parsing which is second uses of express 
+
+“HTTP requests are text-based, and Express provides a req object that represents the request and parses useful parts of it into JavaScript objects
+
+we use res object send method to send response
+res.send();
+very versatile method used for any types of responses
+express converts js objects into json representation
+if there are multiple responses then first one will be send
+
+
+
+
+
+Routing:
+it is process of selecting a path for traffic in a network or between or across multiple networks.
+a big websites has multiple routes
+app.use me jo response bhejte hai wo sab requests ke lia hota hai matlab kisi bhi route pe request bheje app.use wala response har routes ke lia jata hai 
+app.use sari requests ko listen karta hai 
+
+alag alag routes ke hisab se alag alag responses bhejne ke lia ham app se different methods ko use karte hai 
+
+ek path ke lia ek response hi send hota hai 
+
+
+
+
+
+Nodemon:
+is a package
+to automatically restart server with code changes 
+
+
+
+
+
+Path Parameters:
+req.params 
+we can send variable value with path called path Parameters
+used to generate custom pages 
+
+
+
+Query Strings:
+res.query

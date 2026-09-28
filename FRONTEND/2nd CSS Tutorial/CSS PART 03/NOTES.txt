@@ -1,0 +1,204 @@
+CSS INTERMEDIATE 
+
+BOX MODEL IN CSS:
+.Height
+.Width
+.Border
+.Padding
+.Margin
+
+HTML Elements in webpages stored in the form of boxes.
+Boxes are of different different colors has different different meaning for its browser.
+All HTML Elements showed in the form of boxes in the browser - isi phenomenon ka ham css ke andar box model kahte hai..
+
+css ke andar box model ka aur detailed matlab ye hai ki kuch bhi aap elements banayenge html ke andar ya fir webpage par wo saare ke saare elements eventually jo hamara browser hai wo ek box ki form me interpret karega
+
+A box has different different components:
+Contents comes in the content are of the box usually in center.
+.Height: Content Height
+.Width: Content Width
+.Border: outer area of the box or outer line of the box.
+.Padding: empty space between content and border. 
+.Margin: Spaces between two boxes. Individual html elements ko ham kitna dur aur kitna paas rakh rahe hai.
+
+Iss chapter me html elements ko boxes kah rahe hai because browser interpret html elements as the boxes.
+5 properties we can set in the form of boxes.
+
+(i). Height: By default, it sets the content area height of the element
+
+.Height property is used to set the height of the content area of the box
+.empty div which has no content has no height by default
+.pure element ki height set nahi hoti bas content area ki hoti hai
+
+(ii). Width: By default, it sets the content area width of the element 
+.content will be shown in blue area 
+
+(iii). Border: Used to set an elements border
+.border-width
+.border-style
+.border-color
+
+.border is not set for content
+
+Border Shorthand
+width|style|color
+
+.we dont have to write the three most used property of border individually 
+
+Border Sides: To control an individual side of the box
+.border-left
+.border-right
+.border-top
+.border-bottom
+
+.if we want that one side of the border of the box have blue color and other sides have yellow then this is possible in css using individual sides of the border
+
+Border Radius: Used to round the corners of an element's outer border edge
+.we can use this property to make the shape of the button oval or round
+.we can also used for the elements which needs rounded shape
+.if we give border radius 50% then the border will be converted into circle(if height == width) or oval shape
+.we can also control individual edges or corners of the border with the help of individual border radius properties in css.
+like border-top-right-radius: 15px;
+
+(iv). Padding: empty space between content and border.
+.we can control the space between border and content area
+.green highlighted area in dev tools is the padding 
+.we can control padding for individual sides  
+.padding-left
+.padding-right
+.padding-top
+.padding-bottom
+
+Padding Shorthand
+#1. for all 4 sides 
+padding: 50px;
+
+#2. top & bottom | left & right
+padding: 1px 2px;
+
+#3. top | left & right | bottom
+padding: 1px 2px 3px
+
+#4. clockwise -> top | right | bottom | left
+padding: 1px 2px 3px 4px;
+
+.if we dont want padding then we can set the value to 0
+
+
+(v). Margin: To set spacing on the outside of border
+.border to content ke space ke lia padding use karte hai
+.border to border ke space ke lia margin use karte hai
+.orange highlighted area in dev tool while insecpting is the margin area 
+.margin border ke bahar hoti hai
+.padding border ke andar hoti hai
+.margin-left
+.margin-right
+.margin-top
+.margin-bottom
+
+Margin Shorthand
+#1. for all 4 sides 
+margin: 50px;
+
+#2. top & bottom | left & right
+margin: 1px 2px;
+
+#3. top | left & right | bottom
+margin: 1px 2px 3px
+
+#4. clockwise -> top | right | bottom | left
+margin: 1px 2px 3px 4px;
+
+.if we dont want any default or automatic margin then we can set margin to 0 for that particular element 
+like h1 has automatic margin from top and bottom we can remove that margin by setting its margin to 0
+so we can unset default margin 
+
+
+PRACTICE QUESTION
+
+
+Revise HTML Concept:
+Inline v/s Block
+Block Elements: Takes up the full-width available(whole block)
+.Start from new line
+
+Inline Elements: Takes up only necessary width
+.Don't start from new line
+
+
+Display:
+.It sets whether an element is treated as block or inline element and the layout used for its children
+.It controls wheather an element is treated as block or inline element by css and how the layout of the children will be set
+.we can set the display of the elements by different different ways
+
+display: inline  
+-> if we set display as inline for any element then the element start behaving like inline element wheather it is block element or inline element
+
+display: block
+-> if we set display as block for any element then the element start behaving like block element wheather it is block element or inline element
+
+.when we are styling span element height and width will not set and padding and margin will set from left and right only not top and bottom
+Now see what happens if we set same styling for the block element or div
+.when we are styling div element height and width will set along with padding and margin will also set from all sides.
+
+Go see downloaded pdf of conclusion(Block vs inline)
+
+in index3.html and style3.css we make div as an inline element then we can see that because inline element does not accept height and width properties and many other properties that's why it will does not show the normal div element 
+
+So if we want that any block element ke paass styling as well as inline properties dono rahe then we can use inline-block property
+display: inline-block;
+style apply = according to block element hoga
+behave = inline element(single line ke andar saare ke saare aa jaayenge)
+
+.we can set none to display property as well
+.when we want to hide any element from the page then we can use none value for our display property
+
+
+
+Units in CSS:
+Absolute: px, pt,pc,cm,mm,in etc
+Relative: %, em, rem, ch,vh,vw etc
+
+Relative Units:
+(i). Percentage: It is often used to define a size as relative to an element's parent object
+
+eg: width: 33.33% // relative to the parent
+margin-left: 50% // relative to the parent size(parent height ya width)
+
+.if we want to set the property of an element based on the parent property then we use percentage
+.child ki koi property hai jo mai parent ke relation me set karna chahta hu tab main percentage use karunga
+
+
+(ii). em: 
+Relative to font size of the parent, in the case of typographical properties(text related properties) like font-size,font weight etc
+and font size of the element itself, in the case of other properties like width,padding and margin
+
+.parent ke font size ke ralative me ya apne hi font size ke relative me properties set karna chahte hai then we use em unit
+
+.if we want inner div font size changes in relation to outer div font size then we use em
+.we can also set properties for inner element which are related to the font size of the element itself
+
+so that how we can use em apne properties ko relative terms me set karne ke lia
+
+Drawback of Em:
+Snowball effect in nested elements
+
+.font size will be increased for every inner element as compare to its current parent 
+
+
+to avoid Snowball effect there is one more most commonly used relative unit that is rem
+(iii). rem(Root Em):
+Relative to font size of the root element.
+
+.ab jo property set hogi wo root element ke font size ke relation me set hogi
+
+.ems ke lia jo property set hoti hai -> parent/self ke relation me set hoti hai
+.but rems ke andar jo property set hoti hai -> root element(html) ke relation me set hoti hai
+
+for an HTML document, the root element is <html>. so, rem will work according to that.  
+
+
+
+
+
+

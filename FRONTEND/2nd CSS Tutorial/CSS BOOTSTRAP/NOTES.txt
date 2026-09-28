@@ -1,0 +1,124 @@
+BOOTSTRAP:
+.Bootstrap is fundamentally a CSS framework(toolkit); it is built with CSS and requires an understanding of core CSS concepts for any form of customization or effective use.
+.Learning Bootstrap without knowing CSS in like trying to drive a car without understanding how the engine or brakes work.
+.There are different different CSS components that we use repeatedly
+.So the components that we used repeatedly are stored in the toolkit with good styling provided by Bootstrap 
+.So if we want forms, buttons etc on our websites we can take it from the Bootstrap so that we dont need to style everything from starting or scratch.
+.dont feel cheated because today also for maximum websites styling we used vanila css or pure css rather than using Bootstrap
+.first priority is ki hame pure css ache se likhne aata ho 
+.second priority is ki hame jitne bhi framework hai usme se Bootstrap ache se aata ho
+.Bootstrap ke andar kya kya chije exist karti usko ham kaise implement kar sakte hai kaise Bootstrap ko run kaise karna hai apne system par ye sab important hai as compare to ki ham sytax yaad kar rahe hai properties yaad kar rahe hai..
+.focused on understanding
+.Bootstrap flexbox ke concept(kaise apne components ko layout me setup karna hai) pe kaam karta hai
+.prebuilt components bhi hote hai like buttons, forms, navbar etc 
+
+
+
+What is Bootstrap?
+.Bootstrap is a powerful, feature-packed frontend toolkit. Build anything-from prototype to production-in minutes
+.bahut sari existing chije mil jaayengi aur usme ham apne hisab se customization bhi kar sakte hai
+.Bootstrap ke andar already pre built css files hoti hai jinko ham import kar sakte hai and apne document ke lia use kar sakte hai
+
+Benefits of Bootstrap:
+.Makes Development Faster & Easier
+.Good choice of pre-built components(already responsive components)
+.Good browser compatibility
+.Bootstrap me jaruri nahi hai exactly jo aap soch rahe hai waise components dikh jaayega 
+.so usko ham apne hisab se customize karne ke lia css likh sakte hai 
+.mostly cases me ham pure css ko hi use karenge
+
+
+
+How to link Bootstrap with your file 
+-> go to getbootstrap.com and link cdn file 
+What is cdn?
+-> content delivery network
+Basic example of vanila css and Bootstrap 
+What will we cover?
+components
+pre-built and reusable piece of user interface(UI)
+eg- buttons, forms
+
+Layouts
+overall structure and arrangement of the elements
+eg- container, grid
+
+
+
+Layout:
+(i). Container:
+-> Containers are used to contain,pad, and (sometimes) center the content within them.  
+
+.Bootstrap apne sath sath ek particular font style ke sath aata hai 
+.Bootstrap ko jab ham include karte hai font style, font family, font size, font weight gets changed
+.how much width a piece of content will occupy that will be controlled with the help of container layout
+
+
+
+Components:
+(i). Buttons:
+.most useful components
+.if we want to convert button into Bootstrap button then we give it a btn class 
+.you can go and learn about Bootstrap components and everything about Bootstrap on getbootstrap website 
+
+(ii). Badges:
+.Badges are like when we have 10+ msg sign on the app icon that are the badges so to create this badges we use badges components in Bootstrap
+.we use badge class
+.we can include badge inside buttons also
+
+(iii). Alert:
+.aisi chij jispar website ke upar ek dum se dhayan jaye 
+.it is important to include Bootstrap javaScript file also
+.javaScript ki bhi bahot jayada importance hoti hai jab bhi ham chote chote components ke upar functinality add karna chahte hai 
+
+(iv). Button Group:
+.we can also make group of buttons 
+
+(v). Navbar:
+.we can create responsive navbar with help of Bootstrap
+.internally kafi sari chije implement karni padti hai for functinality of any element
+
+(vi). Cards:
+.we can create cards for our websites using Bootstrap
+
+
+
+Layout:
+(ii). Grid system:
+.flexbox based grid system
+.kis screen size me mere elements kis layout me dikhai denge wo ham grid system se control kar sakte hai 
+.works on 12 equally spaced columns
+-> 12 columns system
+.Grid options ki help se ham apne layout ko responsive bna sakte hai 
+
+
+Layout:
+(iii). Columns(Vertical Alignment):  
+.we can also set vertical alignment for grids 
+
+
+
+Forms:
+(i).Form Controls
+(ii).Select
+(iii).Checkbox & Radio
+(iv).Layout
+
+
+(i).Form Controls:
+.jab bhi ham form create karte hai to hamare paas form controls hote hai 
+
+(ii).Select:
+.we can create dropdown using select 
+
+(iii).Checkbox & Radio:
+.frequently used 
+
+(iv).Layout: 
+.Grid Layout can be implemented in forms also 
+
+
+
+.Go and checkout more things of Bootstrap on getbootstrap.commmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+

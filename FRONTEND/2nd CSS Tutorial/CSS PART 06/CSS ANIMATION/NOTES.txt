@@ -1,0 +1,57 @@
+CSS ANIMATION:
+.To animate(animate ka matlab hota hai ki ham element ko ek state se dusre state me leke jana chahte hai) CSS elements
+.we do similar things like what we do from transition and transform 
+.similar to transition but it gives an extra control over the item or elements
+.we can design animation by using css animation that works on different different elements 
+
+.animation template or blueprint:
+.animation is not created if we write only template or blueprint 
+.we have to write different animation properties to create animation after creating template or blueprint
+@keyframes myName {
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+
+Animation properties:
+.animation-name
+.animation-duration
+.animation-timing-function
+.animation-delay
+.animation-iteration-count: (aap kitni baar animation ko dikhana chahte hai)
+.animation-direction: normal/reverse/alternate/alternate-reverse
+
+.Shorthand for animation different different properties:
+animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction
+
+.So whenever we want to apply animation first we create animation template or blueprint then we set animation properties for that template to animate some element
+
+.if we want to change multiple properties of a single element during animation then we can change it by writing multiple properties in the animation template
+
+.to iss tarike se ham animation ko beautiful transition kisi bhi element ke upar create karne ke lia use kar sakte hai 
+
+
+
+% in Animation:
+.if we want animation works in stages(any number of stages)
+
+@keyframes myName {
+    0% {
+        font-size: 20px;
+    }
+    50% {
+        font-size: 30px;
+    }
+    100% {
+        font-size: 40px;
+    }
+}
+
+.from = start = 0%
+.to = end = 100%
+
+
+

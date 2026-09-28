@@ -1,0 +1,11 @@
+Now in this chapter we will discuss some advance topics including asynchronus nature of JavaScript 
+
+(i).
+CALL STACK
+call stack is generally a datastructure in programming that tracks the function calls like which function is being executed 
+it is important to know about call stack because after this we will gonna learn about some advance topic in future so it good to know about the call stack general meaning 
+it is LIFO datastructure Last in first out also first in last out 
+
+Visualizing call stack 
+
+

@@ -1,0 +1,14 @@
+Advanced Feature of Function:
+Functions are values 
+We learn many types of values in this course like (numbers, strings, booleans) and save it in a variable
+Function are also values:
+-we can save a function inside a variable 
+
+
+In this lesson: 
+1. Functions are values 
+2. setTimeout(), setInterval()
+3.  .forEach()
+4. Arrow functions, .addEventListener() to improve our projects
+5. two more array methods .filter(), .map()
+6. Feature of function: closure 

@@ -1,0 +1,159 @@
+In this chapter we will gonna learn about RESTFull API's
+Till now in API we learn how to handle GET and POST request in this chapter we will learn more about API and how to handle other request like PATCH, PUT and DELETE
+And we discuss all this through RESTFull API's
+
+REST is very important concept in WEB DEVELOPMENT and using this concept we create API's
+
+
+REST
+Representational State Transfer 
+REST is an architectural style that defines a set of constraints(rules) to be used for creating web services
+
+REST Rules (Important)
+1.
+Use HTTP methods properly:
+GET → fetch data
+POST → create data
+PUT → update
+DELETE → remove
+
+2.
+Use clean URLs:
+/users
+/users/1
+
+3.
+Stateless:
+👉 Every request is independent
+
+4.
+✅ REST API Example
+app.get("/users", ...);       // get all users
+app.post("/users", ...);      // create user
+app.put("/users/:id", ...);   // update user
+app.delete("/users/:id", ...);// delete user
+✔ This is a REST API
+
+
+⚠️ Non-REST API Example
+/getUsers
+/createUser
+/deleteUser
+
+❌ Not RESTful (bad naming)
+
+REST is an architectural style that give a set of rules for creating API's or web server and we must create API's and web server based on this rules 
+From this we have a term called RESTFull API's : is set of API's that follow the rules or concept of REST 
+
+Generally we use RESTFull API's to perform CRUD operation
+
+To handle operations like CRUD on Databases we use different different API's 
+
+REST Documentation:
+Stack overflow: best practices for rest desing
+
+
+
+
+CRUD Operations:
+GET retrives resources.
+POST submits new data to the server 
+PUT updates existing data completely
+PATCH updates existing data partially 
+DELETE removes data 
+so we perform CRUD operations with the help of the above HTTP verbs
+resources is something for which we perform CRUD operations like in our project post and for twitter its twits
+
+
+
+
+
+Creating RESTful APIs
+Basic layout for creating APIs
+GET    /posts        to get data for all posts       Index Route(Main route or Path)
+POST   /posts        to add a new posts    CREATE Route
+GET    /posts/:id    to get one post (using id)     VIEW Route 
+PATCH  /posts/:id    to update specific post    UPDATE route
+DELETE  /posts/:id    to delete specific post    DESTROY route or path (path which is used to delete some resources is called DESTROY path or route)
+
+so we build application by creating all these RESTful APIs
+
+
+
+
+
+Create First API
+Implement: GET /posts 
+Index Route
+GET    /posts     to get data for all posts
+so we done creating our first API who gives us all the data of the all the posts
+
+
+
+
+Now we create our second API 
+Implement: POST  /posts 
+Create Route 
+POST    /posts     to add a new post 
+
+Actually to implement this API we need to create two route 
+2 routes 
+.Serve the form      GET      /posts/new   
+.Add the new post    POST     /posts
+
+Right now after submitting form we goes to the new page written post request working 
+But In express there is one thing that is used to connect different paths 
+
+
+
+
+
+Redirect
+we use redirect to connect different pages 
+Till now we learn that we can send text, html, objects and arrays etc as respond using or inside res.send()
+and then we learn we can also render html pages using res.render()  - we learn how to render ejs pages using res.render()
+res.redirect(URL);
+send GET request bydefault 
+
+
+
+
+Third API endpoint
+Implement: GET  /posts/:id
+Show Route
+GET      /posts/:id       to get one post(using id)
+
+
+
+
+Create id for Posts 
+UUID Package: create unique string type id automatically
+Universally unique identifier 
+npm install uuid
+
+
+
+Implement: PATCH /posts/:id
+Update Route
+PATCH      /posts/:id      to update specific post
+
+
+
+Edit Route:
+Create Form for Update 
+Edit Route 
+Serve the edit form       GET        /posts/:id/edit  
+
+in HTML forms we can only send GET and POST request which is drawback so to send PATCH,PUT and DELETE request also from the HTML form we use a node.js Package name method-override
+it override the request method of HTML form
+it lets us use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+
+app.use is used for every API request 
+like if we use app.use(methodOverride('_method')) then it will used for every APIs
+
+
+
+
+Implement: /posts/:id
+Destroy Route 
+DELETE      /posts/:id    to delete specific post 

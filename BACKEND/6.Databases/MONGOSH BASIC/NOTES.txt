@@ -1,0 +1,188 @@
+Second Datatbase: MongoDb
+NoSQL Datatbase
+In this chapter we discuss how we can do CRUD operation using Mongo shell in MongoDb
+then we discuss about an important tool mongoose 
+
+MongoShell  
+MongoDb is popular Datatbase specially with express so there is popular stack MEAN and MERN 
+MongoDb can be mastered in around 30 hours 
+but we cover only important part necessary for development process and helpful to attach Datatbase with backend 
+
+
+The Shell:
+to run mongoDb on shell or on command prompt we have to download mongoDb shell as well 
+mongoshell we can use mongodb commands to interact with database 
+mongosh   // to start
+exit      // to exit or to end
+use college    // to create & use a new database called "college"
+we use mongosh for perfoming CRUD operations in database
+C: create or insert new data 
+R: read, fetch or find data 
+U: Update Data
+D: Delete Data
+
+we can also run some javascripts commands in mongoshell
+in mongodb mongoshell internally recognizes the javascript command 
+when we insert some data into database then only the database becomes permannently or visible in show dbs; command
+
+
+
+
+
+BSON Data:
+Binary JSON 
+in mongoDb data is inserted in a special format called BSON data
+
+advanced version of JSON
+issues in JSON format solved by BSON format of data 
+in JSON:
+1. data is stored in text based format 
+2. parsing of text based data is difficult 
+3. space inefficient which is solved by bson 
+4. less datatypes but in BSON there is more datatypes
+we actually give JSON data to the mongodb but mongoDb internally convert this JSON format data into BSON format then store it into the memory 
+so mongoDb internally use BSON format for efficient storage and data traversal
+
+
+
+
+
+important terms:
+Document and Collections:
+Document: MongoDb stores data in form of documents (BSON docs)
+Collection: MongoDb stores documents in collections. 
+collection of documents are called collection in mongodb 
+
+in MySQL individual data is stored in individual row/tuple 
+in mongoDb individual data is stored in individual documents
+{
+    name: "ankit",
+    age: 18,
+    status: "D",
+    groups: ["politics", "news"]
+}
+
+so row in MySQL === documents in MongoDb
+and table in MySQL === collections in MongoDb
+
+
+
+
+
+INSERT in DB:
+insertOne 
+db.collection.insertOne()    -> Insert a single document into a collection.
+if a collection does not exist, MongoDb creates the collection when you first store data for that collection
+show collections
+show tables 
+db.student.insertOne(
+    {
+        name: "adam",
+        marks: 79
+    }
+)
+db.student.find()   -> to show all data or documents of the student collection and this gives result in array of objects form 
+
+mongoDb functions are very similar to javascripts functions
+when we insert any document in a collection then mongoDb automatically gives an id (_id) as key with ObjectId("some id") as value to that document and the id is the primary key of the document
+and primary key are not null and unique so the the id is unique for each document
+
+in mongodb we can give different different set of key values for different different documents but in sql we cannot  
+like for one document we can store name, age, marks and for another document we can store name, roll, city 
+
+
+
+
+
+INSERT in DB
+insertMany (array of documents)
+db.collection.insertMany()   -> insert multiple documets into a collection 
+db.student.insertMany([
+    {name: "bob", marks: 65, city: "Delhi"}, 
+    {name: "eve", city: "Delhi"}
+]) 
+
+
+
+
+
+FIND in DB 
+prints all documents of the collection
+db.collection.find()      // returns everything
+
+for specific queries
+db.collection.find({key: value})      // this query gives an array of document 
+db.collection.findOne({key: value})   // this query gives one document
+
+db.collection.find give a cursor (reference to original document) not actual document it points to the original, it is actually helpful to traverse and access individual data through loop 
+where as db.collection.findOne give an actual document
+we can also find document based on multiple condition {key: value, key: value}
+
+
+
+
+
+FIND in DB
+Query Operators in Find:
+Find student where marks > 75
+db.student.find({marks: {$gt: 75}})
+
+Find student who live in Delhi or Mumbai 
+db.student.find({city: {$in: ["Delhi", "Mumbai"]}})
+values are case sensitive 
+
+Find students who scored > 75 or live in Delhi 
+db.student.find( {$or: [ {marks: {$gt: 75}}, {city: "Delhi} ]} )
+
+
+
+
+
+UPDATE in DB
+updateOne
+db.collection.updateOne()   Updates at most a single document that match a specified filter even though multiple documents may match the specified filter.
+
+db.collection.updateOne( <filter>, <update>, <options> )
+db.student.updateOne( {name: "adam"}, {$set: {marks: 99}} )
+here $set is update operator 
+
+db.collection.updateMany()    Update all documents that match a specified filter 
+db.student.updateMany( {city: "Delhi"}, {$set: {city:"New Delhi"}} )
+
+db.collection.replaceOne()    Replaces at most a single document that match a specified filter even though multiple documents may match the specified filter
+db.student.replaceOne({name: "bob"}, {name: "Ankit", marks: 95, city: "Delhi", state: "Bihar"})
+by replaceOne we change the exisiting document value with new values 
+
+by using replace one we can replace the existing document with new key value with same id 
+
+
+
+
+
+Nesting:
+because data stored in document is in javascripts object so nesting of object may be there so access object inside and the document we use dot operator 
+
+{
+    name: "Aman", 
+    performance: {marks: 66, grade: 'A'}
+}
+db.student.find( {"performance.marks": 66})
+key must be inside double quotes 
+
+
+
+
+
+DELETE in DB
+deleteOne
+db.collection.deleteOne( <filter>, <options> )
+
+deleteMany
+db.collection.deleteMany( <filter>, <options> )
+
+db.collection.deleteMany( {} )    -> this delete the whole documents from a particular collection
+
+db.dropDatabase()
+
+db.collectionName.drop() to delete specific collection 
+

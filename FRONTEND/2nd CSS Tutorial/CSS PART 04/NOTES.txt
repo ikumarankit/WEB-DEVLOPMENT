@@ -1,0 +1,149 @@
+CHAPTER 4 ->  CSS - NEXT STEPS
+
+Alpha Channel: Sets the opacity for a color
+.Ranges from 0 to 1 in rgba (0 means full hidden) and (1 means full visible)
+. we can give alpha channel value in form of both rgba and hex code 
+.In hex code alpha channel ranges from 00 to ff (00 means full hidden) and (ff means full visible)
+
+
+
+Opacity: Sets the opacity for the element
+.Ranges from 0 to 1;
+.(0 means full hidden) and (1 means full visible)
+
+.alpha -> color ki opacity
+.opacity -> pure element ki opacity
+.Opacity will also work for the inner element if the opacity is applied to outer element whereas alpha channel can only manipulate color not inner element
+
+
+
+CSS Transitions:  
+.Transitions enable you to define the transition between two states of an element
+
+.Transitions ke time par property set karne ke lia hai CSS Transitions property ka use karte hai
+.Transitions kuch bhi ho sakta hai jaise hover karne par kuch change ho raha ho ya active hone par kuch change ho raha ho to wo kitna jaldi change to yani slow change ho immediatly ho isko control karne ke lia ham transition property ka use karte hai
+.transition ko use karke ham fade in and fade out wala effect create kar sakte hai css ke andar
+
+Transitions Shorthand:
+property name | duration | timing-function | delay
+
+transition: margin-top 2s ease-in-out 0.2s
+.timing function batata hai ki kis tarike se state change ho raha hai
+.delay batata kitne delay ke baad aapke property me change aaye
+.ek tarike se animation ko create karne ke lia ham transitions property ka use kar sakte hai  
+
+
+
+CSS Transform:
+.This property lets you rotate,scale,skew or translate(move along x and y axis) an element
+.Transition ki help se hamne sikha ki kaise ham element ke upar animation create kar sakte hai ab ham transform ki help se apne element to aur jayada animated kaise bna sakte hai ye sikhenge
+.transformation also trasform content inside transformed element 
+
+(i).rotate: 
+.transform: rotate(45deg);
+.clockwise rotation
+
+(ii).scale
+.transform: scale(0.5)
+.scale can apply for 2d and 3d both
+.can indivisually scale either along x or y axis or both 
+eg. scaleX(0.5) and scaleY(2) and scale(0.5, 2)
+
+(iii).translate 
+.translate means move along x and y axis
+.movement only along with 2d plane
+.transform: translate(50px, 50px)  -> 
+
+(iv). skew
+transform: skew(30deg);
+.this is also in degree
+.skew means it gets tilted
+.content also gets skewed 
+
+.saare ke saare transform values content par bhi apply karta hai 
+.we can also apply these four property together for any element
+
+
+
+Box Shadow: 
+.It adds shadow effects around an element's frame(border);
+
+.box-shadow: 2px 2px 10px green;
+box-shadow: xoffset yoffset blurradius shadow-color
+
+.in webpage jab bhi mujhe kisi element ko web page ki bahar ki tarf dikhana hota hai then ham apne element ko box shadow de sakte hai
+.create 3d effect
+
+
+
+Background Image:
+.Lets you set an image as a Background
+
+background-image: url("link");
+background-size: contain/cover/auto;
+
+.it is not necessary that the size of the image we want to set as a background will be fitted with element that's why we use background-size property
+
+.background-image has three value
+1.contain:  it will not crop,scale the image to be fit in the element 
+-> it repeat the image to fill the background of the box or element
+2.cover: it will crop the image but not scale the image (mostly used) 
+3.auto: image will be stretch(blured out and zoom in)
+
+.we can also add text or create any element above background image
+
+
+
+Creating a Card Hover Effect:
+
+
+
+Position:
+.The position CSS property sets how an element is positioned in a document
+.The top,right,bottom and left properties determine the final location of positioned elements.
+
+.static
+.relative
+.absolute
+.fixed
+
+.ham kisi bhi particular element ko apne pure document me kahi bhi place kar sakte hai with help of different position properties
+
+.kisi bhi element ke position ko manipulate karne ke lia ham use karenge top, right, bottom and left properties ko
+
+(i). Position - Static 
+.The top, right, bottom, left and z-index properties have no effect.
+.This is the default value
+.Agar aap kisi bhi element ki position property ko set nahi karte to by default uski position property static rahti hai
+
+(ii). Position - Relative 
+.the offset(left, right, top and bottom) is relative to itself based on the values of top, right, bottom and left
+.shift from top, left, right and bottom as compared to its previous original position
+
+(iii). Position - Absolute
+.The element is removed from the normal document flow, and no space is created for the element in the page layout.
+.It is positioned relative to its closest positioned ancestor(parent), if any; otherwise, it is placed relative to the initial containing block(body)
+.agar parent ke paas koi position nahi hai other than static then body ke relative place hoga
+.agar parent ke paas koi position hai then uske relative place hoga
+
+Important difference between relative and absolute position element:
+.absolute kahta hai ki document me jiski position absolute hai uske lia koi space create nahi karunga but relative ke lia space create hogi
+
+(iv). Position - Fixed
+.The element is removed from the normal document flow, and no space is created for the element in the page layout
+.It is positioned relative to the initial containing block(body ya pura document ke relative hi mera element place hoga) established by the viewport
+.Iske kuch kuch exception hote hai 
+.it is always fixed even when scrolling means mera fixed position wala element wo mere screen ke upar waise ka waisa fixed rahega jab ham scroll karenge
+like navbar in different different websites
+
+.There is one more option for position which is sticky 
+search on mdn 
+
+Development karte time bahot baar ham documentation hi padh rahe hote hai..
+
+
+
+Creating a Simple Smiley Face
+
+
+

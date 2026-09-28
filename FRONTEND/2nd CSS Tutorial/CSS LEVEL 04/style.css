@@ -1,0 +1,183 @@
+/* FLEX BOX */
+/* FLEX-DIRECTION  */
+/* 
+row
+row-reverse
+column
+column-reverse 
+*/
+
+/* FLEX PROPERTY FOR FLEX CONTAINER */
+/* justify-content */
+/* /* flex-wrap */
+/* align-items */
+/* align-content */
+/* 
+flex-start
+flext-end
+center
+space-around
+space-between
+space-evenly 
+*/
+
+/* FLEX PROPERTY FOR FLEX ITEM */
+/* 
+align-self
+flex-grow
+flex-shrink
+*/
+
+/* body {
+    text-align: center;
+}
+div {
+    width: 50px;
+    height: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#container {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    /// flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse; ///
+    flex-direction: row;
+    justify-content: center;
+    /// flex-wrap: wrap; ///
+    align-items: flex-start;
+    /// align-content: center; ///
+}
+
+#box1 {
+    background-color: yellowgreen;
+    flex-grow: 1;
+}
+
+#box2 {
+    background-color: yellow;
+    height: 200px;
+    /// flex-shrink: 0.5; ///
+    flex-grow: 2;
+}
+
+#box3 {
+    background-color: violet;
+    height: 75px;
+}
+
+#box4 {
+    background-color: blueviolet;
+}
+
+#box5 {
+    background-color: cadetblue;
+    /// align-self: flex-end; ///
+} */
+
+
+
+/* PRACTICE SET : 06 */
+
+/*
+* {
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+#navbar {
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#outer {
+    width: 600px;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    /// align-items: center; ///
+}
+
+#inner {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    align-self: center;
+} 
+*/
+
+
+
+/* MEDIA QUERIES */
+/* 
+div {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+}
+
+@media (width : 600px) {
+    div {
+        background-color: red;
+    }
+}
+
+@media (min-width : 600px) {
+    div {
+        background-color: blue;
+    }
+}
+
+@media (max-width : 600px) {
+    div {
+        background-color: black;
+    }
+}
+
+@media (min-width : 200px) and (max-width : 300px) {
+    div {
+        background-color: blueviolet;
+    }
+} 
+*/
+
+
+
+/* PRACTICE SET : 07 */
+@media (max-width : 300px) {
+    div {
+        color : green;
+    }
+}
+
+@media (min-width : 300px) and (max-width : 400px) {
+    div {
+        color: pink;
+    }
+}
+
+@media (min-width : 400px) and (max-width : 600px) {
+    div {
+        color: red;
+    }
+}
+
+@media (min-width : 600px) {
+    div {
+        color: blue;
+    }
+}
+
+
+
+

@@ -1,0 +1,127 @@
+/* CSS UNITS AND POSITION PROPERTIES */
+/* 
+%
+em
+rem 
+vh viewport height
+vw viewport width
+*/
+/* #outer {
+    height: 100px;
+    width: 300px;
+    background-color: brown;
+    font-size: 20px;
+}
+
+#inner {
+    height: 50px;
+    width: 30%;
+    background-color: aqua;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 2em;
+    width: 5em;
+    width: 5rem;
+} */
+
+
+/* POSITION PROPERTY */
+/* 
+static    top,right,bottom,left and z-index 
+relative  top,right,bottom,left and z-index 
+absolute  top,right,bottom,left and z-index 
+fixed     top,right,bottom,left and z-index 
+*/
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+#box1 {
+    position: static;
+}
+
+#box2 {
+    position: relative;
+    top: 20px;
+    right: 10px;
+    z-index: 2;
+}
+
+#box3 {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    z-index: -3;
+}
+
+#box4 {
+    position: fixed;
+    top: 30px;
+    right: 10px;
+}
+
+#box5 {
+    position: sticky;
+    top: 50px;
+} */
+
+
+/* BACKGROUND IMAGE */
+/* BACKGROUND SIZE */
+/* 
+cover
+contain 
+auto  
+*/
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+body {
+    background-image: url("deerphoto.jpg");
+    background-size: cover;
+}
+#box1 {
+    background-image: url("deerphoto.jpg");
+    background-size: cover;
+}
+
+#box2 {
+    background-image: url("photo2.jpg");
+    background-size: cover;
+}
+
+#box3 {
+    background-image: url("photo3.jpg");
+    background-size: contain;
+}
+
+#box4 {
+    background-image: url("photo1.jpg");
+    background-size: auto;
+} */
+
+
+
+/* PRACTICE SET : 05 */
+div {
+    width: 300px;
+    height: 300px;
+    background-image: url("nature.jpg");
+    background-size: cover;
+    position: fixed;
+    right: 0;
+}
+
+
+
+
+

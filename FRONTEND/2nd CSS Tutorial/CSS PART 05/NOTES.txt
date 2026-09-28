@@ -1,0 +1,200 @@
+CSS CHAPTER:05
+FLEXBOX
+
+.CSS ke andar properties ko yaad karne se ratne se faayda nahi hota balki understand karne se faayda hota hai kyuki uske baad jab bhi ham uss tarike ka concept apne webpage website pe lagana chahte hai to usko search kar sakte hai ya doucumentation refer kar sakte hai   
+.concept ko samajhna is important rather that memorization
+
+
+What is Flexbox?
+Flexible Box layout
+.It is a one-dimensional layout method for arranging items in rows or columns
+.Elements ko arrange karne ka tarika
+.Flexbox helps in arranging content on the screen or webpage and unke bich me jo space hai unko kaise control karte hai
+.Elements of the webpages changes according to the screen size and it is important for the webpage to respond like this(responsive websites)
+.Alag alag screen size ke according webpage websites khud ko change kar paye apne layout ko change kar paaye islia flexbox jaisi chijo ki jarurat padi
+.It helps make responsive websites
+.Flexbox helps makes the element and element layout flexible
+
+.Before learning flexbox first understand The Flex Model:
+direction = row
+     |
+-----|----------main axis
+     |
+     |
+     |
+    cross axis
+
+
+direction = column
+     |
+-----|----------cross axis
+     |
+     |
+     |
+    main axis
+
+agar hamne kisi element ko row ke direction me flexbox property di hai then row direction uska main axis ho jaata hai and column uska cross axis ho jata hai
+
+but agar hamne kisi element ko column ke direction me flexbox property di hai then column direction uska main axis ho jata hai and row direction uska cross axis ho jata haid
+
+
+
+General Example:
+Imagine we create a three div inside a outer div(container: this container become flex container if we give this div or container a display property to flex and items inside this container becomes flex item like the three divs inside becomes flex items)
+.when we have to give flex box property to multiple items then we give display as flex to their container
+.if we give some element to display property as flex then how their internal element(flex items) behaves and hows their layout and how they arrangement layout that is what we going to saw
+
+.when we set display as flex then the direction of item will be row wise by default 
+
+
+
+Flexbox Direction 
+.It sets how flex items are placed in the flex container, along which axis and direction.
+.by default row hoti hai jab jam flex direction nahi dete hai tab
+
+.flex-direction: row; -> main axis left to right(first element comes at left)
+.flex-direction: row-reverse;  -> main axis right to left (first element comes at right)
+.flex-direction: column;  -> main axis top to bottom
+(first element comes at top)
+.flex-direction: column-reverse;  -> main axis bottom to top (first element comes at bottom)
+
+.cross axis and main axis is the horizontal line or vertical line depends on the flexbox direction
+.we focused on axis so much because the upcoming flex properties fully depends on which direction the main axis and cross axis is
+
+
+
+Justify Content: 
+.Tells how the browser distributes spaces between and around content items along the main-axis
+.by default flex start hota hai jab ham justify content nahi dete hai tab
+
+.justify-content: flex-start;  (main axis ka start)
+.justify-content: flex-end;  (main axis ka end)
+.justify-content: center;  (main axis ka center)
+
+.main axis ke alog mera middle wala left, right wala spaces consider hoga naki top down wala if direction is row 
+.mera first element jaha tha wahi rahega matlab first pe tha to first pe hi rahega jab hab justify content ko flex end kare ya start
+.when we want ki hamara sequence same rahe bss arrangement left right ho jaye then we use justify content
+.element ke order(pahle konsa element aa raha hai baad me kon sa aa raha hai) ko flex direction control karega
+.space ko justify content control karega
+
+three more values:
+.if there is extra space left inside flex container then for that we can use these values 
+.justify-content: space-between;  (extra spaces along main axis comes between flex items)
+.justify-content: space-around; (jitni space middle me thi uski adhi start me aur end me chla jayega)
+.justify-content: space-evenly;  (middle space = start and end space)
+
+.main axis ke along element aur uske space ko control aur distributes karna hai then use justify content
+
+
+
+Flex Wrap:
+.Sets whether flex items are forced onto one line or can wrap onto multiple lines 
+.by default no wrap hota hai jab ham flex wrap nahi dete hai tab
+
+.flex-wrap: nowrap;  (if want to fit all items in a single line without considering its real width or height)
+.flex-wrap: wrap;  (ek line ke andar jitne item aa sakte hai wo aa jaayenge baki next line me)(normally main axis ke along wrap ho jate hai)
+.flex-wrap: wrap-reverse; (cross axis ke along reverse direction me mere element wrap ho jate hai)
+
+.when we set any container or div display as flex then it will restrict or limit the height and width of the flex items it will try to arrange every elements in one line hence ignore the real height and width of the element which are inside the container or div, but if we want ki element ko flex items ko utni hi width mile jitni unke lia set hai then we can use flex-wrap property for the flex item it will wrap the element (wrap karne ka matlab hai ki agar saare elements ko ek line me jagah nahi milti to baki elements ko next line me push kardo)
+.ek line me jagah nahi hai to agli line me chale jao and continue until jagah nahi mil jati
+.multiple lines me elements dikhne lag jate hai
+
+
+
+Align Items:
+.Distributes our items along the cross axis 
+.by default flex start hota hai jab ham align items nahi dete hai tab
+.by default flex start hota hai 
+
+align-items: flex-start;  (cross axis ka start)
+align-items: flex-end;  (cross axis ka end)
+align-items: center;  (cross axis ka center)
+
+.cross axis ke along space available hogi tabhi items move karega 
+
+one more values:
+align-items: baseline;  (agar aapke divs ke andar yani flex items ke andar koi bhi content likha hua hai to ab wo sara ka sara content ek same baseline par available milega) 
+.different sizes ke divs kuch iss tarike se arrange ho jaayenge ki sara ka sara content same line or height par milega
+
+.to check align-items: baseline we make some changes in orange and blue div 
+.to put text inside items on the same line we can use baseline value for align-items
+
+
+
+Align Content:
+.It sets the distribution of space between and around content items along a flexbox's cross-axis
+.same like justify content but along cross axis
+
+.align-content: flex-start / flex-end / center
+.align-content: space-between / space-around / space-evenly
+.align-content: baseline
+
+
+
+Align Self:
+.Aligns an item along the cross axis
+.abhi tak ham sari chije container ko assign karte the aur uss hisab se hamare sare flex items align ho jate the
+.through align self we can align individual item along the cross axis 
+.align self completely behaves like align items but for individual item whereas align item is for group of items(all flex items)
+.align self (self yani individual ke property ya alignment set kia hai ) have higer priority than align items
+
+.align-self: flex-start;
+.align-self: flex-end;
+.align-self: center;
+.align-self: baseline;
+
+.so we can control any individual items by align self 
+
+
+
+Flex Sizing: 
+.if there is extra space in the container then we can grow our flex items and shrink if the there is no extra space (yani ham apne items ka main size badha ya ghata sakte hai) (if items placed in row direction -> main size = width)
+(if element items in column direction -> main size = height )
+.ham yaha par individual items ka size ka baat kar rahe hai
+
+(i).flex-basis: It sets the initial main size of a flex item
+.unit = px
+.row alignment = main size = width
+.column alignment = main size = height
+.flex-basis: 100px;
+
+(ii).flex-grow: It specifies how much of the flex containers remaining space should be asssigned to the flex items main size 
+.unitless
+.for every individual items by default flex-grow ki value is equal to 1 but we can modify also like 2,3,0.5 etc
+.we use unitless value for flex grow
+
+.flex-grow: 1;
+
+
+(iii). flex-shrink: It sets the flex shrink factor of a flex item.
+.unitless
+..for every individual items by default flex-shrink ki value is equal to 1 but we can modify also like 2,3,0.5 etc
+.flex-shrink: 1
+
+(if element items in column direction means flex direction in column -> main size = height ) then height grow ya shrink karega 
+
+(if items placed in row direction means flex direction in row -> main size = width) then width grow ya shrink karega 
+
+flex sizing navigation me bahut jayada kaam aati hai 
+
+
+
+Flex Sizing Shorthand: flex
+.flex-grow | flex-shrink | flex-basis
+-> flex: 2 2 100px;
+
+.flex-grow | flex-basis
+->flex: 2 100px;
+
+.flex-grow(unitless)
+->flex: 2;
+
+.flex-basis
+->flex: 100px;
+
+
+
+
+
+
+
