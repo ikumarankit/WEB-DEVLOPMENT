@@ -4,6 +4,6 @@ In this lesson:
 3.Three different ways to create strings:
 '....', "....", `....`(template strings)
 4.Escape characters: \'  \n
-5.Two feature of Template String 
+5.Template String are string created with backticks and Two feature of Template String 
 (i). Interpolation
 (ii). multi-line strings

@@ -1,7 +1,57 @@
 In this lesson:
 1.Variables = a way to save values and use them later 
+Extra: JS have a special feature of semincolon insertion it will automatically insert a semicolon in the end of the statment but it is good practice to write it because sometime it insert it in wrong place 
 2.Re-assign a Variable
 3.Created the Cart quantity feature
 4.Shortcuts for re-assigning a variable
 5.Naming conventions and best practices for variable names
 6.3 ways to create a variable: let,const and var
+
+
+The primary differences between var, let, and const in JavaScript center around scoping, reassignment capabilities, and hoisting behavior.
+Quick Comparison
+Feature       	var         	let	        const
+Scope	Function / Global	   Block	     Block
+Reassignment	Allowed	       Allowed   	Forbidden (Throws error)
+Redeclaration	Allowed	      Forbidden   	Forbidden
+
+Hoisting Behavior	Initialized as undefined	  Stays in Temporal Dead Zone              	Stays in Temporal Dead Zone
+
+Initial Value Required	No    	No	         Yes
+
+
+
+1. Scope
+• var is function-scoped: If you declare a var variable inside a function, it is isolated to that function. However, if declared inside a block—like an if statement or a for loop—it leaks out and is accessible outside that block.
+• let and const are block-scoped: They are strictly bound to the nearest pair of curly braces {} where they are defined. Trying to access them outside that block results in a ReferenceError.
+javascript
+if (true) {
+  var functional = "I leak outside!";
+  let blockCapped = "I stay inside!";
+}
+console.log(functional); // Works: "I leak outside!"
+console.log(blockCapped); // Throws ReferenceError
+Use code with caution.
+
+
+
+2. Reassignment & Redeclaration
+• var allows you to redeclare the same variable name and update its value as many times as you want within the same scope. This can accidentally overwrite variables and cause bugs.
+• let allows you to update (reassign) the value, but you cannot redeclare it within the same scope.
+• const is strictly read-only. It requires an initial value upon declaration and cannot be reassigned.
+Note on Objects/Arrays: If you assign an object or array to a const variable, the reference itself cannot change, but you can still modify the internal properties or elements
+
+
+
+3. Hoisting and the Temporal Dead Zone (TDZ)
+• var variables are hoisted to the top of their scope and initialized with undefined. You can technically reference them before the line they are written, though they will return undefined.
+• let and const variables are also hoisted, but they are not initialized. They sit in a Temporal Dead Zone (TDZ) from the start of the block until the engine evaluates the line where they are declared. Accessing them early triggers a ReferenceError.
+javascript
+console.log(x); // Outputs: undefined
+var x = 5;
+
+console.log(y); // Throws ReferenceError
+let y = 10;
+
+
+Modern JavaScript standards (ES6+) suggest avoiding var entirely:

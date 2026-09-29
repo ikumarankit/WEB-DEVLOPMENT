@@ -1,24 +1,29 @@
 In this lesson:
-1. Objects = group related values together 
+1. Objects = lets us group multiple related values together 
 2. Added a score feature to Rock Paper Scissors Game
 3. Built-in Objects (JSON, localStorage)
 4. More Details about objects (null, Auto-Boxing, references)
 5. Shortucts (destructuring, Shorthand property, Shorthand method)
+
+
 What is object?
 objects let us group multiple vlaues together.
 objects store multiple property value pairs.
 we can access any objects values by using dot notation like
 objectName.propertyName
 
+
 Why we use objects:
 - make our code more organized
 - objects let us group multiple vlaues together.
 - objects let us use multiple values together 
 
+
 Dot Notation
 Bracket Notation 
 
-Built-in objects:
+
+Built-in objects: they are provided by the language
 (i).console
 (ii). Math
 (iii). JSON: help us work with JSON
@@ -31,7 +36,7 @@ Difference compared to JavaScript objects:
 - all property value pair are must be in double quotes in JSON
 - JSON doesn't support single quotes 
 - JSON doesn't support functions
-why we use JSON syntax rather than JavaScript object syntax because JavaScript object only make sense in JavaScript but on the other hand JSON syntax can be understood by many languages so JSON syntax is more universal 
+why we use JSON syntax rather than JavaScript object syntax because JavaScript object only make sense in JavaScript but on the other hand JSON syntax can be understood by almost every programming languages so JSON syntax is more universal 
 
 we use JSON:
 - when we send data between two computers that might use different programming languages 
@@ -46,13 +51,15 @@ now let's learn how to convert back:
 - we use another method in Built-in JSON object that is: 
 - JSON.parse()
 
+so JSON object helps us convert back and forth between JSON and JS Object 
 
-(iv). localStorage
+
+(iv). localStorage - is another built-in object 
 - localStorage object is used to save values more permanently 
 - so far we've been saving our values in variables however
-- variables are temporary they only exits on the current page
+- variables are temporary they only exists on the current page
 - if we refresh the page / close the page, all the variables are deleted
-- localStorage doesn't get deleted when we refresh the page
+- localStorage doesn't get deleted when we refresh the page 
 - method to save a value in localStorage is: localStorage.setItem()
 - localStorage only support strings
 
@@ -63,13 +70,23 @@ More Details About Objects:
 Difference between null and undefined:
 we use null we intensionally want something to be empty
 
-(ii). Auto-Boxing: JavaScript automatically wraps the string into a special object this is called Auto-Boxing
+function function1(parameter = 'default'){
+    console.log(parameter);
+}
+
+function1();  // default
+function1(undefined);   // default
+function1(null);   // null 
+
+
+(ii). Auto-Boxing: JavaScript has a special feature called Autoboxig and JavaScript automatically wraps the string in a special object this objects has properties and methods and its done automatically
 - 'hello'.length
 - 'hello'.toUpperCase()
 Auto-Boxing also works with other types of values like numbers and booleans 
 3.0.toString()
 true.toString()
-doesn't work with null and undefined
+Autoboxing doesn't work with null and undefined
+
 
 (iii). Objects are references 
 objects are somewhere else in the memory, variables are just references 
