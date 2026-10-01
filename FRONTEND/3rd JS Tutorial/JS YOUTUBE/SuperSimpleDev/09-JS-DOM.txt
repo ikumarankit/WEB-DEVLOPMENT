@@ -2,19 +2,19 @@ In this chapter we gonna learn about one of the important feature of JavaScript 
 DOM: it is another built-in object called document object like console, math, JSON, localStorage (we already learn about what is built in object in previous chapter)
 document object and webpage are linked together 
 document object is linked to the webpage
-The document object represents / models the webpage
-document also has methods like document.querySelector('button');
+The document object represents/models the webpage
+this document object also has methods like document.querySelector('button');
 
-we can have HTML elements inside JavaScript
+
+we can have HTML elements inside JavaScript using this document object 
 The DOM combines JavaScript and HTML together and it gives JavaScript control of the webpage
-
 When an HTML element is inside a JavaScript then The HTML element is converted into a JavaScript object
-
 using the innerHTML property JavaScript can replace the HTML inside the body to whatever we want we have full control of the webpage
+
 
 method of document object:
 document.querySelector()
-- lets us get any HTML element from the page and put it inside JavaScript
+- lets us get any HTML element from the page and put it inside our JavaScript
 
 HTML elements are JavaScript objects
 and objects are values so we can store it in a variables
@@ -33,7 +33,9 @@ click, keydowns => events
 onclick, onkeydown => event listeners
 eventlisteners checks for events and runs JavaScript when those events happens
 
-every eventlisteners gets an event object
+every eventlisteners including onclick gets an event object
+
+
 
 some more details about JavaScript:
 example of type Coercion or automatic type conversion
@@ -48,7 +50,7 @@ like this window object represents the browser
 
 window object has a shortcut:
 we dont have to type window. in front of any property or method
-JavaScript will automatically add it.
+JavaScript will automatically add window in front for us.
 
 
 In this lesson:

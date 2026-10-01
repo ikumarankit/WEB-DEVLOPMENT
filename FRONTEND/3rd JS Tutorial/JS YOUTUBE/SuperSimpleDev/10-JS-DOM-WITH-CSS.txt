@@ -1,12 +1,9 @@
 We know that HTML elements are JavaScript Objects and they can have property and methods like innerText and innerHTML 
-
-classList is an Object that gives control of the class attribute it have add, remove property 
+classList is an Object that gives control of the class attribute of an element it have add, remove property 
 
 
 In this lesson:
 1. Reviewed CSS, and added CSS to all our projects 
 2. classList
 3. Finished Rock Paper Scissors
-4. Organize JavaScript and CSS code into separate files 
-
-
+4. Organize JavaScript and CSS code into separate files

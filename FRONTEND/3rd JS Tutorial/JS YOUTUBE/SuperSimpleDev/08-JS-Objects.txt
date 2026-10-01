@@ -91,7 +91,8 @@ Autoboxing doesn't work with null and undefined
 (iii). Objects are references 
 objects are somewhere else in the memory, variables are just references 
 
-(iv). we can't compare objects directly 
+
+(iv). we can't compare objects directly
 when we compare the variable that contains object then we compare the references, not the values inside the objects
 
 
@@ -99,9 +100,9 @@ Last:
 Shortucts for objects:
 (i). destructuring:
 - const message = object.message;
-if variable name and property name is same then we can use: called destructuring
+if variable name and property name is same then we can use: destructuring
 - const { message } = object;
-so the destructuring Shortucts took the property out of the object and saved it in the message variable
+so the destructuring Shortcuts took the property out of the object and saved it in the message variable
 destructuring: easier way to take properties out of an object
 
 (ii). Shorthand Property:

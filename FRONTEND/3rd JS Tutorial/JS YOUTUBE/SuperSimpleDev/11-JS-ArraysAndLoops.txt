@@ -1,3 +1,5 @@
+An array is another type of value in JS and it represents a list of values
+Inside an array we can put any type of value 
 An array is an object (it's a special type of object).
 so it have properties and methods 
 
